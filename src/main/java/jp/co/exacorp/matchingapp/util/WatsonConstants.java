@@ -10,13 +10,13 @@ public class WatsonConstants {
 	public static final String PI_PASS = "I4KT2OKIruD1";
 
 	/** Natural Language Classifier URL */
-	public static final String NLC_URL = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/90e7acx197-nlc-77570/classify";
+	public static final String NLC_URL = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/90e7b7x198-nlc-98000/classify";
 	public static final String NLC_URL_F = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/";
 	public static final String NLC_URL_E = "/classify";
 	/** Natural Language Classifier UserName */
-	public static final String NLC_USER = "e266e114-8711-4884-a100-7e09995dd0b9";
+	public static final String NLC_USER = "082dac74-e9d5-4fd1-8b15-b560c1aa62eb";
 	/** Natural Language Classifier Password */
-	public static final String NLC_PASS = "V4z0KiWKkdV1";
+	public static final String NLC_PASS = "T0sPyCRjSZO1";
 
 	/** Visual Recognition URL */
 	public static final String VR_URL = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=641bb391421993e94a0cbf568ee22362d9359fde&version=2016-12-27";
