@@ -2,9 +2,9 @@ package jp.co.exacorp.matchingapp.util;
 
 public class LINEConstants {
 	/** LINE CHANNEL SECRET */
-	public static final String LINE_CHANNEL_SECRET = "12112eaeee16b512a05b51d819c42250";
+	public static final String LINE_CHANNEL_SECRET = "bd6c0a5a70fec403c38bafbee813af02";
 	/** LINE CHANNEL ACCESS TOKEN */
-	public static final String LINE_CHANNEL_ACCESS_TOKEN = "54r2zjPqPXO9LjI1qaee8LDdmaFNRKPpIzcogRiJHhDvK6wByxHQgUE77Y9lxzhQW6emSDDo25vwPl2o2REFo9XRPmtUi2fyfaU/7InDqPotCVUEiOS9VYeQbE1c2yltsaMX0/vF2HO0KSyt44NsxAdB04t89/1O/w1cDnyilFU=";
+	public static final String LINE_CHANNEL_ACCESS_TOKEN = "FX9kJSOIHxrQpoQ3kWDTagFEPeSKhpAXynk1rCFEaqgpOCvDHIjkFP3s8rDBMLpMnIaWMsBW9xX2IJPwoTlGode0u3WZaHMXJmuEFOb3MLa9k79oIATUgGh381ce3uu8keGfcU8awu1huOZdwEtFSQdB04t89/1O/w1cDnyilFU==";
 	/** LINE HEADER X-Line-Signature */
 	public static final String LINE_HEADER_SIGNATURE = "X-Line-Signature";
 	/** LINE REPLY API */
