@@ -217,8 +217,10 @@ public class DFLRecommendItem {
 
 						// 質問
 						default:
-							mesJab.add(MessageAPIUtil
-									.giveMessage("この回答を見てほしい！"));
+//コメントアウト start
+//							mesJab.add(MessageAPIUtil
+//									.giveMessage("この回答を見てほしい！"));
+//コメントアウト end
 
 							// NLCにテキスト投げて返ってきた結果を表示させる
 							String cid = dflii.getCID(qMap.get(ITEM));
@@ -234,22 +236,25 @@ public class DFLRecommendItem {
 							}
 							mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
+//コメントアウト start
+
 							// ここで終わりにするかどうかとかの処理
 							// レコメンドを既に行った後であればレコメンドしないような流れにしたい
 							// 他の商品をおすすめされたい時用ボタン
-							JsonArrayBuilder buttonAct = Json
-									.createArrayBuilder();
-							buttonAct.add(MessageAPIUtil.makeMessage4Action(
-									"他の商品", OTHERS_ITEM));
-							buttonAct.add(MessageAPIUtil.makeMessage4Action(
-									"もういいや", END));
-							mesJab.add(MessageAPIUtil
-									.giveButton("他の質問がある場合は再度入力してください。",
-											Constants.BRANK, Constants.BRANK,
-											"他の質問がある場合はもう一度入力してくれ！\nボタンから"
-													+ qMap.get(ITEM)
-													+ "以外の商品をおすすめすることもできるぞ！",
-											buttonAct));
+//							JsonArrayBuilder buttonAct = Json
+//									.createArrayBuilder();
+//							buttonAct.add(MessageAPIUtil.makeMessage4Action(
+//									"他の商品", OTHERS_ITEM));
+//							buttonAct.add(MessageAPIUtil.makeMessage4Action(
+//									"もういいや", END));
+//							mesJab.add(MessageAPIUtil
+//									.giveButton("他の質問がある場合は再度入力してください。",
+//											Constants.BRANK, Constants.BRANK,
+//											"他の質問がある場合はもう一度入力してくれ！\nボタンから"
+//													+ qMap.get(ITEM)
+//													+ "以外の商品をおすすめすることもできるぞ！",
+//											buttonAct));
+//コメントアウト end
 							break;
 						}
 						break;
