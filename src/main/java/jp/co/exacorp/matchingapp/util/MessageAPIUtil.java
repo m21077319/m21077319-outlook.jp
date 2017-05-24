@@ -95,8 +95,8 @@ public class MessageAPIUtil {
 	public static JsonObjectBuilder makeMessage1Action(String label, String text) {
 		JsonObjectBuilder actJob = Json.createObjectBuilder();
 		actJob.add(LINEConstants.TYPE, LINEConstants.MESSAGE);
-//		actJob.add(LINEConstants.LABEL, label);
-//		actJob.add(LINEConstants.TEXT, text);
+		actJob.add(LINEConstants.LABEL, label);
+		actJob.add(LINEConstants.TEXT, text);
 		return actJob;
 	}
 // 追加 END
@@ -182,12 +182,14 @@ public class MessageAPIUtil {
 	 * @return
 	 */
 	public static JsonObjectBuilder giveColumns1Carousel(String thumbUrl,
+//	public static JsonObjectBuilder giveColumns1Carousel(String thumbUrl
+//			 ) {
 			String title, String text, JsonArrayBuilder actions) {
 		JsonObjectBuilder column = Json.createObjectBuilder();
 		column.add(LINEConstants.THUMB_URL, thumbUrl);
-//		column.add(LINEConstants.TITLE, title);
-//		column.add(LINEConstants.TEXT, text);
-//		column.add(LINEConstants.ACTIONS, actions);
+		column.add(LINEConstants.TITLE, title);
+		column.add(LINEConstants.TEXT, text);
+		column.add(LINEConstants.ACTIONS, actions);
 		return column;
 	}
 // 追加 END
@@ -210,6 +212,25 @@ public class MessageAPIUtil {
 		return column;
 	}
 
+// 追加 START
+//	/**
+//	 * @param altText
+//	 * @param columns
+//	 *            JsonArrayBuilder
+//	 * @return
+//	 */
+//	public static JsonObjectBuilder giveCarousel1(String altText,
+//			JsonArrayBuilder columns) {
+//		JsonObjectBuilder carousel = Json.createObjectBuilder();
+//		carousel.add(LINEConstants.TYPE, LINEConstants.TEMPLATE);
+//		carousel.add(LINEConstants.ALTTEXT, altText);
+//		JsonObjectBuilder template = Json.createObjectBuilder();
+//		template.add(LINEConstants.TYPE, LINEConstants.CAROUSEL);
+//		template.add(LINEConstants.COLUMNS, columns);
+//		carousel.add(LINEConstants.TEMPLATE, template);
+//		return carousel;
+//	}
+// 追加 END
 	/**
 	 * @param altText
 	 * @param columns

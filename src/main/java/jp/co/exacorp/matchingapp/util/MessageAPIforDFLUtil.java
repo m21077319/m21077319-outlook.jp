@@ -111,6 +111,15 @@ public class MessageAPIforDFLUtil {
 		return job;
 	}
 
+// 追加 START
+	public static JsonObjectBuilder giveMes1Actions(String label, String text) {
+		JsonObjectBuilder actJob = Json.createObjectBuilder();
+		actJob.add(LINEConstants.TYPE, LINEConstants.MESSAGE);
+		actJob.add(LINEConstants.LABEL, label);
+		actJob.add(LINEConstants.TEXT, text);
+		return actJob;
+	}
+// 追加 END
 	public static JsonObjectBuilder giveMes4Actions(String label, String text) {
 		JsonObjectBuilder actJob = Json.createObjectBuilder();
 		actJob.add(LINEConstants.TYPE, LINEConstants.MESSAGE);

@@ -497,15 +497,15 @@ public class DFLRecommendItem {
 	/** 画像カルーセルを返す */
 	private JsonObjectBuilder makeCarousel1Item() {
 		JsonArrayBuilder columns = Json.createArrayBuilder();
-//		JsonArrayBuilder actionA = Json.createArrayBuilder();
+		JsonArrayBuilder actionA = Json.createArrayBuilder();
 		JsonObjectBuilder carousel = Json.createObjectBuilder();
 
-//		actionA.add(MessageAPIforDFLUtil.giveMes1Actions("これにする",
-//				DFLConstants.PREMIRE_RECEIVE_GLB));
+		actionA.add(MessageAPIforDFLUtil.giveMes1Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_GLB));
 		columns.add(MessageAPIUtil.giveColumns1Carousel(Constants.IMG_URL
 				+ DFLConstants.PREMIRE_RECEIVE_TES_IMG,
-//				DFLConstants.PREMIRE_RECEIVE_TES,
-//				DFLConstants.PREMIRE_RECEIVE_TES_TXT, actionA));
+				DFLConstants.PREMIRE_RECEIVE_TES,
+				DFLConstants.PREMIRE_RECEIVE_TES_TXT, actionA));
 
 		carousel = MessageAPIUtil.giveCarousel("商品一覧カルーセル", columns);
 
