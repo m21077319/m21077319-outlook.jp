@@ -52,6 +52,13 @@ public class DFLConstants {
 	public static final String PREMIRE_CURRENCY_PLUS2_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_CURRENCY_PLUS2_AUDIO = "premierCurrency.m4a";
 
+//追加 start
+	/** テスト */
+	public static final String PREMIRE_RECEIVE_TES = "テスト";
+	public static final String PREMIRE_RECEIVE_TES_TXT = "-テスト-";
+	public static final String PREMIRE_RECEIVE_TES_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=76&agency=27";
+	public static final String PREMIRE_RECEIVE_TES_IMG = "pre_re_jpn.jpg";
+//追加 end
 	/** 定額終身保険 */
 	public static final String PREMIRE_RECEIVE_JPN = "プレミアレシーブ（円建）";
 	public static final String PREMIRE_RECEIVE_JPN_TXT = "-定期支払金付積立利率変動型終身保険-";
@@ -61,19 +68,9 @@ public class DFLConstants {
 	public static final String PREMIRE_RECEIVE_GLB = "プレミアレシーブ（外貨建）";
 	public static final String PREMIRE_RECEIVE_GLB_TXT = "-定期支払金付積立利率変動型終身保険（通貨指定型）-";
 	public static final String PREMIRE_RECEIVE_GLB_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
- 	public static final String PREMIRE_RECEIVE_GLB_IMG = "pre_re_glb.jpg";
+	public static final String PREMIRE_RECEIVE_GLB_IMG = "pre_re_glb.jpg";
 	public static final String PREMIER_RECIEVE_GLB_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_RECEIVE_GLB_AUDIO = "premierRecieve.m4a";
-// 追加 start
-	/** 定額終身保険 */
-	public static final String PREMIRE_RECEIVE_TES = "○○○";
-	public static final String PREMIRE_RECEIVE_TES_TXT = "-○○○-";
-	public static final String PREMIRE_RECEIVE_TES_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-//	public static final String PREMIRE_RECEIVE_TES_IMG = "pre_re_glb01.jpg";
-	public static final String PREMIRE_RECEIVE_TES_IMG = "pre_test_glb.jpg";
-	public static final String PREMIER_RECIEVE_TES_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
-	public static final String PREMIRE_RECEIVE_TES_AUDIO = "premierRecieve.m4a";
-// 追加 end
 	/** 定額終身保険 */
 	public static final String PREMIRE_GIFT2_AUS = "プレミアギフト２（豪ドル建）";
 	public static final String PREMIRE_GIFT2_AUS_TXT = "-積立利率変動型終身保険（豪ドル建）-";
