@@ -234,6 +234,11 @@ public class DFLRecommendItem {
 									sb.append(nlcResults[i]).append("\n");
 								}
 							}
+//処理追加 start
+							// カルーセルで商品表示
+							mesJab.add(makeCarousel3Item());
+//処理追加 end
+
 							mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
 //コメントアウト start
