@@ -235,8 +235,8 @@ public class DFLRecommendItem {
 								}
 							}
 //処理追加 start
-							// カルーセルで商品表示
-							mesJab.add(makeCarousel3Item());
+							// カルーセルで画像表示
+							mesJab.add(makeCarousel1Item());
 //処理追加 end
 
 							mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
@@ -493,6 +493,26 @@ public class DFLRecommendItem {
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
 	}
 
+// 追加 start
+	/** 画像カルーセルを返す */
+	private JsonObjectBuilder makeCarousel1Item() {
+		JsonArrayBuilder columns = Json.createArrayBuilder();
+		JsonArrayBuilder actionA = Json.createArrayBuilder();
+		JsonObjectBuilder carousel = Json.createObjectBuilder();
+
+		actionA.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_GLB));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_TES_IMG,
+				DFLConstants.PREMIRE_RECEIVE_TES,
+				DFLConstants.PREMIRE_RECEIVE_TES_TXT, actionA));
+
+		carousel = MessageAPIUtil.giveCarousel("商品一覧カルーセル", columns);
+
+		return carousel;
+	}
+
+// 追加 end
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel3Item() {
 		JsonArrayBuilder columns = Json.createArrayBuilder();
