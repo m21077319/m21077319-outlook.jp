@@ -67,13 +67,13 @@ public class DFLConstants {
 	public static final String PREMIRE_RECEIVE_GLB_AUDIO = "premierRecieve.m4a";
 // 追加 start
 	/** 定額終身保険 */
-	public static final String PREMIRE_RECEIVE_TES = "○○○";
-	public static final String PREMIRE_RECEIVE_TES_TXT = "-○○○-";
+//	public static final String PREMIRE_RECEIVE_TES = "○○○";
+//	public static final String PREMIRE_RECEIVE_TES_TXT = "-○○○-";
 	public static final String PREMIRE_RECEIVE_TES_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
 	public static final String PREMIRE_RECEIVE_TES_IMG = "pre_re_glb01.jpg";
-	public static final String PREMIER_RECIEVE_TES_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
-	public static final String PREMIRE_RECEIVE_TES_AUDIO = "premierRecieve.m4a";
-	// 追加 end
+//	public static final String PREMIER_RECIEVE_TES_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+//	public static final String PREMIRE_RECEIVE_TES_AUDIO = "premierRecieve.m4a";
+// 追加 end
 	/** 定額終身保険 */
 	public static final String PREMIRE_GIFT2_AUS = "プレミアギフト２（豪ドル建）";
 	public static final String PREMIRE_GIFT2_AUS_TXT = "-積立利率変動型終身保険（豪ドル建）-";

@@ -82,6 +82,24 @@ public class MessageAPIUtil {
 		return actJob;
 	}
 
+// 追加 START
+	/**
+	 * アクション用メッセージ
+	 *
+	 * @param label
+	 *            ボタン表示ラベル
+	 * @param text
+	 *            送信するテキスト
+	 * @return アクション
+	 */
+	public static JsonObjectBuilder makeMessage1Action(String label, String text) {
+		JsonObjectBuilder actJob = Json.createObjectBuilder();
+		actJob.add(LINEConstants.TYPE, LINEConstants.MESSAGE);
+//		actJob.add(LINEConstants.LABEL, label);
+//		actJob.add(LINEConstants.TEXT, text);
+		return actJob;
+	}
+// 追加 END
 	/**
 	 * アクション用メッセージ
 	 *
@@ -153,6 +171,26 @@ public class MessageAPIUtil {
 		return job.build().toString();
 	}
 
+// 追加 START
+	/**
+	 * カルーセル用のカラム作成
+	 *
+	 * @param thumbUrl
+	 * @param title
+	 * @param text
+	 * @param actions
+	 * @return
+	 */
+	public static JsonObjectBuilder giveColumns1Carousel(String thumbUrl,
+			String title, String text, JsonArrayBuilder actions) {
+		JsonObjectBuilder column = Json.createObjectBuilder();
+		column.add(LINEConstants.THUMB_URL, thumbUrl);
+//		column.add(LINEConstants.TITLE, title);
+//		column.add(LINEConstants.TEXT, text);
+//		column.add(LINEConstants.ACTIONS, actions);
+		return column;
+	}
+// 追加 END
 	/**
 	 * カルーセル用のカラム作成
 	 *
