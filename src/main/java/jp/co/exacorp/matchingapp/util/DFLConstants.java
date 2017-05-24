@@ -63,7 +63,7 @@ public class DFLConstants {
 	public static final String PREMIRE_RECEIVE_JPN = "プレミアレシーブ（円建）";
 	public static final String PREMIRE_RECEIVE_JPN_TXT = "-定期支払金付積立利率変動型終身保険-";
 	public static final String PREMIRE_RECEIVE_JPN_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=76&agency=27";
-	public static final String PREMIRE_RECEIVE_JPN_IMG = "pre_re_jpn.jpg";
+	public static final String PREMIRE_RECEIVE_JPN_IMG = "test01.jpg";
 	/** 定額終身保険 */
 	public static final String PREMIRE_RECEIVE_GLB = "プレミアレシーブ（外貨建）";
 	public static final String PREMIRE_RECEIVE_GLB_TXT = "-定期支払金付積立利率変動型終身保険（通貨指定型）-";
