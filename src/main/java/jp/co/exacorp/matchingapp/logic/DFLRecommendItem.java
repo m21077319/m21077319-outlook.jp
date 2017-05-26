@@ -110,8 +110,16 @@ public class DFLRecommendItem {
 			if (text.equals(SELECT_ITEM_EXPLANATION)) {
 				mesJab.add(MessageAPIUtil.giveMessage("お好みのプランでーじゃろうか？"));
 
+//追加 START
+				for (int i = 0; i < 3 ; i++) {
+//追加 END
+
 				// カルーセルでプラン表示
 				mesJab.add(makeCarousel3Item());
+// 追加 START
+				}
+// 追加 END
+
 
 				qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
 
