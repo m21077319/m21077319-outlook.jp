@@ -25,12 +25,12 @@ public class DFLRecommendItem {
 	private static final String ITEM = "item";
 	private static final String ITEM_SELECT_BEFORE = "itemSelectBefore";
 	private static final String ITEM_SELECT = "itemSelect";
-	private static final String SELECT_ITEM_EXPLANATION = "商品説明";
+	private static final String SELECT_ITEM_EXPLANATION = "プラン説明";
 	private static final String ITEM_EXPLANATION = "itemExplanation";
 	private static final String END = "もういいや";
 	private static final String UNRELATED = "unrelated";
 	private static final String NO_TEXT = "noText";
-	private static final String OTHERS_ITEM = "他の商品をおすすめして！";
+	private static final String OTHERS_ITEM = "他のプランをおすすめして！";
 	private static final String RECOMMEND = "recommend";
 	private static final String RECOMMEND_BEFORE = "recommendBefore";
 	private static final String RECOMMEND_OK = "recommendOk";
@@ -80,10 +80,10 @@ public class DFLRecommendItem {
 		// テキストに限定
 		if (!type.equals(LINEConstants.TEXT)) {
 			if (!qMap.containsKey(NO_TEXT)) {
-				mesJab.add(MessageAPIUtil.giveMessage("申し訳ないが、テキストで頼む・・"));
+				mesJab.add(MessageAPIUtil.giveMessage("申し訳あらんが、テキストを入力してつかあさい。"));
 				qMap.put(NO_TEXT, NO_TEXT);
 			} else {
-				mesJab.add(MessageAPIUtil.giveMessage("すまんが最初からやり直してくれ・・"));
+				mesJab.add(MessageAPIUtil.giveMessage("すみませんが最初からやり直してつかあさい。"));
 				qmb.removeMapEntry(userId);
 			}
 		} else {
@@ -106,16 +106,16 @@ public class DFLRecommendItem {
 				System.out.println(e.getKey() + " -> " + e.getValue());
 			}
 
-			// 商品説明押下
+			// プラン説明押下
 			if (text.equals(SELECT_ITEM_EXPLANATION)) {
-				mesJab.add(MessageAPIUtil.giveMessage("どれにするんだ？"));
+				mesJab.add(MessageAPIUtil.giveMessage("お好みのプランでーじゃろうか？"));
 
-				// カルーセルで商品表示
+				// カルーセルでプラン表示
 				mesJab.add(makeCarousel3Item());
 
 				qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
 
-				// サブ状態に商品選択前を設定
+				// サブ状態にプラン選択前を設定
 				qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT_BEFORE);
 
 				// レコメンド押下
@@ -135,12 +135,12 @@ public class DFLRecommendItem {
 			} else {
 				// 状態無（初期状態でなんか言ってきたとき）
 				if (state.isEmpty()) {
-					mesJab.add(MessageAPIUtil.giveMessage("画面下のボタンを押してくれ！"));
+					mesJab.add(MessageAPIUtil.giveMessage("画面下のボタンを押してつかあさい。"));
 
-					// 商品説明
+					// プラン説明
 				} else if (state.equalsIgnoreCase(ITEM_EXPLANATION)) {
 					switch (stateSub) {
-					// 商品選択をしてもらった時
+					// プラン選択をしてもらった時
 					case ITEM_SELECT_BEFORE:
 						switch (text) {
 						// 送られてきた文言がどうか
@@ -156,11 +156,11 @@ public class DFLRecommendItem {
 						default:
 							if (qMap.containsKey(UNRELATED)) {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("すまんが最初からやり直してくれ・・"));
+										.giveMessage("すみませんが最初からやり直してつかあさい。"));
 								qmb.removeMapEntry(userId);
 							} else {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("ボタンを押すんだ！"));
+										.giveMessage("ボタンを押してつかあさい。"));
 								qMap.put(UNRELATED, UNRELATED);
 							}
 							flag = true;
@@ -168,35 +168,35 @@ public class DFLRecommendItem {
 						}
 						break;
 
-					// 商品選択
+					// プラン選択
 					case ITEM_SELECT:
 						switch (text) {
 						// もういいや
 						case END:
-							mesJab.add(MessageAPIUtil.giveMessage("ぐっばい。。"));
+							mesJab.add(MessageAPIUtil.giveMessage("ほんならの。"));
 							qmb.removeMapEntry(userId);
 							break;
 
-						// 他の商品見せて
+						// 他のプラン見せて
 						case OTHERS_ITEM:
 							// レコメンド終わってる時
 							if (qMap.containsKey(RECOMMEND_END)) {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("どの商品にするんだ？"));
+										.giveMessage("でーがお好みのプランじゃろうか？"));
 
-								// カルーセルで商品表示
+								// カルーセルでプラン表示
 								mesJab.add(makeCarousel3Item());
 
 								qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
 
-								// サブ状態に商品選択前を設定
+								// サブ状態にプラン選択前を設定
 								qMap.put(LINEConstants.STATE_SUB,
 										ITEM_SELECT_BEFORE);
 
 								// レコメンドまだの時
 							} else {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("質問に答えてくれるならぴったりな商品をおすすめするぞ！"));
+										.giveMessage("質問に答えてくれるならぴったりなプランをおすすめするぞ！"));
 
 								// confirm作成
 								JsonArrayBuilder confirmAct = Json
@@ -217,8 +217,10 @@ public class DFLRecommendItem {
 
 						// 質問
 						default:
-							mesJab.add(MessageAPIUtil
-									.giveMessage("この回答を見てほしい！"));
+// 削除 START
+//							mesJab.add(MessageAPIUtil
+//									.giveMessage("この回答を見てほしい！"));
+// 削除 END
 
 							// NLCにテキスト投げて返ってきた結果を表示させる
 							String cid = dflii.getCID(qMap.get(ITEM));
@@ -234,22 +236,24 @@ public class DFLRecommendItem {
 							}
 							mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
+// 削除 START
 							// ここで終わりにするかどうかとかの処理
 							// レコメンドを既に行った後であればレコメンドしないような流れにしたい
-							// 他の商品をおすすめされたい時用ボタン
-							JsonArrayBuilder buttonAct = Json
-									.createArrayBuilder();
-							buttonAct.add(MessageAPIUtil.makeMessage4Action(
-									"他の商品", OTHERS_ITEM));
-							buttonAct.add(MessageAPIUtil.makeMessage4Action(
-									"もういいや", END));
-							mesJab.add(MessageAPIUtil
-									.giveButton("他の質問がある場合は再度入力してください。",
-											Constants.BRANK, Constants.BRANK,
-											"他の質問がある場合はもう一度入力してくれ！\nボタンから"
-													+ qMap.get(ITEM)
-													+ "以外の商品をおすすめすることもできるぞ！",
-											buttonAct));
+							// 他のプランをおすすめされたい時用ボタン
+//							JsonArrayBuilder buttonAct = Json
+//									.createArrayBuilder();
+//							buttonAct.add(MessageAPIUtil.makeMessage4Action(
+//									"他のプラン", OTHERS_ITEM));
+//							buttonAct.add(MessageAPIUtil.makeMessage4Action(
+//									"もういいや", END));
+//							mesJab.add(MessageAPIUtil
+//									.giveButton("他の質問がある場合は再度入力してください。",
+//											Constants.BRANK, Constants.BRANK,
+//											"他の質問がある場合はもう一度入力してくれ！\nボタンから"
+//													+ qMap.get(ITEM)
+//													+ "以外のプランをおすすめすることもできるぞ！",
+//											buttonAct));
+// 削除 END
 							break;
 						}
 						break;
@@ -363,7 +367,7 @@ public class DFLRecommendItem {
 										.giveMessage("君におすすめなのはこれだ！！！\n間違いない！！！"));
 								qMap.put(ITEM, recommendItem.get("name"));
 
-								// itemDataに商品情報持たせる
+								// itemDataにプラン情報持たせる
 								Map<String, String> itemData = dflii
 										.getInfo(recommendItem.get("name"));
 
@@ -383,8 +387,8 @@ public class DFLRecommendItem {
 								mesJab.add(MessageAPIUtil
 										.giveMessage("君の性格を数値にするとこんな感じだ！\n"
 												+ pi.toString()
-												+ "この性格の人は今俺が言った商品に合ってるぜ！"));
-								// TODO ここに商品の情報出すのが良い気がする
+												+ "この性格の人は今俺が言ったプランに合ってるぜ！"));
+								// TODO ここにプランの情報出すのが良い気がする
 
 								// confirm作成
 								JsonArrayBuilder confirmAct = Json
@@ -394,7 +398,7 @@ public class DFLRecommendItem {
 								confirmAct.add(MessageAPIUtil
 										.makeMessage4Action("うーーーん", NG));
 								mesJab.add(MessageAPIUtil.giveConfirm(
-										"この商品どうかな？", "この商品、どうだ？", confirmAct));
+										"このプランどうかな？", "このプラン、どうだ？", confirmAct));
 
 								qMap.put(LINEConstants.STATE_SUB, ITEM_OK_OR_NG);
 							}
@@ -414,7 +418,7 @@ public class DFLRecommendItem {
 						}
 						break;
 
-					// 商品が気に入ったか気に入ってないかの選択後
+					// プランが気に入ったか気に入ってないかの選択後
 					case ITEM_OK_OR_NG:
 						// レコメンドは終わった状態にする
 						qMap.put(RECOMMEND_END, RECOMMEND_END);
@@ -422,8 +426,8 @@ public class DFLRecommendItem {
 						switch (text) {
 						// OKの時
 						case OK:
-							// TODO レコメンドした商品の簡単な情報を出す
-							// その商品についての質問に答える状態に遷移
+							// TODO レコメンドしたプランの簡単な情報を出す
+							// そのプランについての質問に答える状態に遷移
 							qMap.put(ITEM, DFLConstants.PREMIRE_RECEIVE_GLB);
 							mesJab.add(MessageAPIUtil.giveMessage(qMap
 									.get(ITEM) + "についてならなんでも聞いてくれ！"));
@@ -433,7 +437,7 @@ public class DFLRecommendItem {
 
 						// NGの時
 						case NG:
-							// TODO 全商品（3種類）のメリットをパッと出す
+							// TODO 全プラン（3種類）のメリットをパッと出す
 							mesJab.add(MessageAPIUtil
 									.giveMessage(DFLConstants.PREMIRE_RECEIVE_GLB
 											+ "\n一定の金額を毎年確実に受け取りながら、減らさずに残せる外貨建の一時払終身保険だ！\n\n"
@@ -444,16 +448,16 @@ public class DFLRecommendItem {
 							mesJab.add(MessageAPIUtil
 									.giveMessage("どれが気になるんだい？"));
 
-							// カルーセルで商品表示
+							// カルーセルでプラン表示
 							mesJab.add(makeCarousel3Item());
 
-							// 商品説明を選択した後に3種類選ばせる状態に遷移
+							// プラン説明を選択した後に3種類選ばせる状態に遷移
 							qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
 							qMap.put(LINEConstants.STATE_SUB,
 									ITEM_SELECT_BEFORE);
 
 							// TODO [確認]
-							// 全種類のメリットと商品選んだあとの簡単な説明が一緒なら表示しないようにしたい
+							// 全種類のメリットとプラン選んだあとの簡単な説明が一緒なら表示しないようにしたい
 							break;
 						}
 						break;
@@ -511,7 +515,7 @@ public class DFLRecommendItem {
 				+ DFLConstants.PREMIRE_STORY_IMG, DFLConstants.PREMIRE_STORY,
 				DFLConstants.PREMIRE_STORY_TXT, actionC));
 
-		carousel = MessageAPIUtil.giveCarousel("商品一覧カルーセル", columns);
+		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
 
 		return carousel;
 	}
@@ -520,7 +524,7 @@ public class DFLRecommendItem {
 			String imgDir, JsonArrayBuilder mesJab) {
 		List<Map<String, String>> resultList = MessageAPIforDFLUtil.mm
 				.actMatchMaker(userId, query, imgDir);
-		mesJab.add(MessageAPIUtil.giveMessage("君におすすめの商品はコレ！"));
+		mesJab.add(MessageAPIUtil.giveMessage("君におすすめのプランはコレ！"));
 		mesJab.add(MessageAPIUtil.giveMessage("「相談する」をタップすると君と私と選んだアドバイザーさんの"
 				+ "LINEグループを作成するよ！"));
 		mesJab.add(MessageAPIforDFLUtil.giveCarouselRecommend(resultList));

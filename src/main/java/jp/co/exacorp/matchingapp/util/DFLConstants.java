@@ -38,15 +38,15 @@ public class DFLConstants {
 	public static final String PREMIRE_JUMP2_GLB_IMG = "pre_j2_glb.jpg";
 
 	/** 定額年金保険 */
-	public static final String PREMIRE_STORY = "プレミアストーリー";
-	public static final String PREMIRE_STORY_TXT = "-通貨指定型個人年金保険（16）-";
+	public static final String PREMIRE_STORY = "倉敷の古都を町歩き";
+	public static final String PREMIRE_STORY_TXT = "～○○に学ぶ女性の美しい品格～";
 	public static final String PREMIRE_STORY_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=132&agency=27";
 	public static final String PREMIRE_STORY_IMG = "pre_str.jpg";
 	public static final String PREMIRE_STORY_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_STORY_AUDIO = "premierStory.m4a";
 	/** 定額年金保険 */
-	public static final String PREMIRE_CURRENCY_PLUS2 = "プレミアカレンシー・プラス２";
-	public static final String PREMIRE_CURRENCY_PLUS2_TXT = "-通貨指定型個人年金保険-";
+	public static final String PREMIRE_CURRENCY_PLUS2 = "川船";
+	public static final String PREMIRE_CURRENCY_PLUS2_TXT = "～江戸の粋を体感～";
 	public static final String PREMIRE_CURRENCY_PLUS2_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=137&agency=27";
 	public static final String PREMIRE_CURRENCY_PLUS2_IMG = "pre_cur_plus.jpg";
 	public static final String PREMIRE_CURRENCY_PLUS2_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
@@ -58,8 +58,8 @@ public class DFLConstants {
 	public static final String PREMIRE_RECEIVE_JPN_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=76&agency=27";
 	public static final String PREMIRE_RECEIVE_JPN_IMG = "pre_re_jpn.jpg";
 	/** 定額終身保険 */
-	public static final String PREMIRE_RECEIVE_GLB = "プレミアレシーブ（外貨建）";
-	public static final String PREMIRE_RECEIVE_GLB_TXT = "-定期支払金付積立利率変動型終身保険（通貨指定型）-";
+	public static final String PREMIRE_RECEIVE_GLB = "備前焼の陶芸体験";
+	public static final String PREMIRE_RECEIVE_GLB_TXT = "～詫び寂び～";
 	public static final String PREMIRE_RECEIVE_GLB_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
 	public static final String PREMIRE_RECEIVE_GLB_IMG = "pre_re_glb.jpg";
 	public static final String PREMIER_RECIEVE_GLB_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
