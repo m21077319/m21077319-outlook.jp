@@ -147,7 +147,7 @@ public class DFLRecommendItem {
 						case DFLConstants.PREMIRE_RECEIVE_GLB:
 							qMap.put(ITEM, DFLConstants.PREMIRE_RECEIVE_GLB);
 							mesJab.add(MessageAPIUtil.giveMessage(text
-									+ "についてならなんでも聞いてくれ！"));
+									+ "についてならなんでも聞いつかあさい。"));
 							qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT);
 							break;
 
@@ -196,7 +196,7 @@ public class DFLRecommendItem {
 								// レコメンドまだの時
 							} else {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("質問に答えてくれるならぴったりなプランをおすすめするぞ！"));
+										.giveMessage("質問にいただけたんじゃら、ぴったりなプランをおすすめするんじゃ。"));
 
 								// confirm作成
 								JsonArrayBuilder confirmAct = Json
@@ -206,7 +206,7 @@ public class DFLRecommendItem {
 								confirmAct.add(MessageAPIUtil
 										.makeMessage4Action("いいよ！", OK));
 								mesJab.add(MessageAPIUtil.giveConfirm(
-										"あなたのことについて少し教えて？", "答えてくれるよな？",
+										"あなたのことについてちーと教えて？", "答えとっただけますか？",
 										confirmAct));
 
 								qMap.put(LINEConstants.STATE, RECOMMEND);
@@ -407,11 +407,11 @@ public class DFLRecommendItem {
 						} else {
 							if (qMap.containsKey(UNRELATED)) {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("最初からやり直していただきたい・・・申し訳ない・・・"));
+										.giveMessage("申し訳あらんが、最初からやり直してつかあさい。"));
 								qmb.removeMapEntry(userId);
 							} else {
 								mesJab.add(MessageAPIUtil
-										.giveMessage("ボタンを押すんだ！"));
+										.giveMessage("ボタンを押してつかあさい。"));
 								qMap.put(UNRELATED, UNRELATED);
 							}
 							flag = true;
@@ -430,7 +430,7 @@ public class DFLRecommendItem {
 							// そのプランについての質問に答える状態に遷移
 							qMap.put(ITEM, DFLConstants.PREMIRE_RECEIVE_GLB);
 							mesJab.add(MessageAPIUtil.giveMessage(qMap
-									.get(ITEM) + "についてならなんでも聞いてくれ！"));
+									.get(ITEM) + "についてならなんでも聞いつかあさい。"));
 							qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
 							qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT);
 							break;
@@ -446,7 +446,7 @@ public class DFLRecommendItem {
 											+ DFLConstants.PREMIRE_STORY
 											+ "\n高金利で確実に増やしながら、１年後から年金を受け取れる外貨建の年金保険だ！！"));
 							mesJab.add(MessageAPIUtil
-									.giveMessage("どれが気になるんだい？"));
+									.giveMessage("でーが気になるんじゃか？"));
 
 							// カルーセルでプラン表示
 							mesJab.add(makeCarousel3Item());
@@ -465,10 +465,10 @@ public class DFLRecommendItem {
 					default:
 						if (qMap.containsKey(UNRELATED)) {
 							mesJab.add(MessageAPIUtil
-									.giveMessage("すまんな！最初からやり直してくれ！"));
+									.giveMessage("はあしわけあらん！最初からやり直してつかあさい！"));
 							qmb.removeMapEntry(userId);
 						} else {
-							mesJab.add(MessageAPIUtil.giveMessage("ボタンを押すんだ！"));
+							mesJab.add(MessageAPIUtil.giveMessage("ボタンを押してつかさい"));
 							qMap.put(UNRELATED, UNRELATED);
 						}
 						flag = true;
