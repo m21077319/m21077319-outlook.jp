@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.codec.binary.Base64;
+
 import jp.co.exacorp.matchingapp.logic.DFLItem;
 import jp.co.exacorp.matchingapp.logic.DFLRecommendItem;
 import jp.co.exacorp.matchingapp.logic.MatchMakeTalk;
@@ -25,8 +27,6 @@ import jp.co.exacorp.matchingapp.logic.RightActor;
 import jp.co.exacorp.matchingapp.logic.api.LineReplyAPIContact;
 import jp.co.exacorp.matchingapp.util.Constants;
 import jp.co.exacorp.matchingapp.util.LINEConstants;
-
-import org.apache.commons.codec.binary.Base64;
 
 @WebServlet("/TEST01APP")
 public class GetMessageFromWebHookServlet extends HttpServlet {

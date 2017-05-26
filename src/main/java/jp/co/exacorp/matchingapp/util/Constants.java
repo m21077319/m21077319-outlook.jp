@@ -2,16 +2,6 @@ package jp.co.exacorp.matchingapp.util;
 
 public class Constants {
 
-	/** LINE CHANNEL SECRET */
-	public static final String LINE_CHANNEL_SECRET = "bd6c0a5a70fec403c38bafbee813af02";
-	/** LINE CHANNEL ACCESS TOKEN */
-	public static final String LINE_CHANNEL_ACCESS_TOKEN = "BOk8MjlHaEV+bNDFh4MkjsexVhPsaLB/gTccfHSz/NJLI1lWajAPB1k037LXWL0hl4aUQIlm07biUyggoW/Ioyuvj/0kGFJYAdHjbPsI9mI2DxPz4H6bCAvUlN69y6VLXSbYucyivO164MsQ3exA/wdB04t89/1O/w1cDnyilFU=";
-	/** LINE HEADER X-Line-Signature */
-	public static final String LINE_HEADER_SIGNATURE = "X-Line-Signature";
-
-	/** LINE REPLY API */
-	public static final String LINE_REPLY_API = "https://api.line.me/v2/bot/message/reply";
-
 	/** HMAC_SHA256 */
 	public static final String HMAC_SHA256 = "HmacSHA256";
 

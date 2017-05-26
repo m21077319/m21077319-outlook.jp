@@ -217,10 +217,8 @@ public class DFLRecommendItem {
 
 						// 質問
 						default:
-//コメントアウト start
-//							mesJab.add(MessageAPIUtil
-//									.giveMessage("この回答を見てほしい！"));
-//コメントアウト end
+							mesJab.add(MessageAPIUtil
+									.giveMessage("この回答を見てほしい！"));
 
 							// NLCにテキスト投げて返ってきた結果を表示させる
 							String cid = dflii.getCID(qMap.get(ITEM));
@@ -234,32 +232,24 @@ public class DFLRecommendItem {
 									sb.append(nlcResults[i]).append("\n");
 								}
 							}
-//処理追加 start
-							// カルーセルで画像表示
-//							mesJab.add(makeCarousel1Item());
-//処理追加 end
-
 							mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
-
-//コメントアウト start
 
 							// ここで終わりにするかどうかとかの処理
 							// レコメンドを既に行った後であればレコメンドしないような流れにしたい
 							// 他の商品をおすすめされたい時用ボタン
-//							JsonArrayBuilder buttonAct = Json
-//									.createArrayBuilder();
-//							buttonAct.add(MessageAPIUtil.makeMessage4Action(
-//									"他の商品", OTHERS_ITEM));
-//							buttonAct.add(MessageAPIUtil.makeMessage4Action(
-//									"もういいや", END));
-//							mesJab.add(MessageAPIUtil
-//									.giveButton("他の質問がある場合は再度入力してください。",
-//											Constants.BRANK, Constants.BRANK,
-//											"他の質問がある場合はもう一度入力してくれ！\nボタンから"
-//													+ qMap.get(ITEM)
-//													+ "以外の商品をおすすめすることもできるぞ！",
-//											buttonAct));
-//コメントアウト end
+							JsonArrayBuilder buttonAct = Json
+									.createArrayBuilder();
+							buttonAct.add(MessageAPIUtil.makeMessage4Action(
+									"他の商品", OTHERS_ITEM));
+							buttonAct.add(MessageAPIUtil.makeMessage4Action(
+									"もういいや", END));
+							mesJab.add(MessageAPIUtil
+									.giveButton("他の質問がある場合は再度入力してください。",
+											Constants.BRANK, Constants.BRANK,
+											"他の質問がある場合はもう一度入力してくれ！\nボタンから"
+													+ qMap.get(ITEM)
+													+ "以外の商品をおすすめすることもできるぞ！",
+											buttonAct));
 							break;
 						}
 						break;
@@ -493,26 +483,6 @@ public class DFLRecommendItem {
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
 	}
 
-// 追加 start
-//	/** 画像カルーセルを返す */
-	//	private JsonObjectBuilder makeCarousel1Item() {
-	//		JsonArrayBuilder columns = Json.createArrayBuilder();
-	//		JsonArrayBuilder actionA = Json.createArrayBuilder();
-	//		JsonObjectBuilder carousel = Json.createObjectBuilder();
-	//
-	//		actionA.add(MessageAPIforDFLUtil.giveMes1Actions("これにする",
-	//				DFLConstants.PREMIRE_RECEIVE_GLB));
-	//		columns.add(MessageAPIUtil.giveColumns1Carousel(Constants.IMG_URL
-	//				+ DFLConstants.PREMIRE_RECEIVE_TES_IMG,
-	//				DFLConstants.PREMIRE_RECEIVE_TES,
-	//				DFLConstants.PREMIRE_RECEIVE_TES_TXT, actionA));
-	//
-	//	carousel = MessageAPIUtil.giveCarousel("商品一覧カルーセル", columns);
-	//
-	//	return carousel;
-	//	}
-
-// 追加 end
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel3Item() {
 		JsonArrayBuilder columns = Json.createArrayBuilder();
