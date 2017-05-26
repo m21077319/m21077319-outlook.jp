@@ -115,7 +115,8 @@ public class DFLRecommendItem {
 //追加 END
 
 				// カルーセルでプラン表示
-				mesJab.add(makeCarousel3Item());
+//				mesJab.add(makeCarousel3Item());
+				mesJab.add(makeCarousel1Item());
 // 追加 START
 				}
 // 追加 END
@@ -494,6 +495,26 @@ public class DFLRecommendItem {
 
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
 	}
+
+//追加 START
+	/** 営業職員さんが扱える三種類のカルーセルを返す */
+	private JsonObjectBuilder makeCarousel1Item() {
+		JsonArrayBuilder columns = Json.createArrayBuilder();
+		JsonArrayBuilder actionA = Json.createArrayBuilder();
+		JsonObjectBuilder carousel = Json.createObjectBuilder();
+
+		actionA.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_GLB));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_GLB_IMG,
+				DFLConstants.PREMIRE_RECEIVE_GLB,
+				DFLConstants.PREMIRE_RECEIVE_GLB_TXT, actionA));
+
+		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
+
+		return carousel;
+	}
+//追加 END
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel3Item() {
