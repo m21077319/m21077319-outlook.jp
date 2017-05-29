@@ -16,10 +16,10 @@ import javax.json.JsonObjectBuilder;
 import javax.json.JsonReader;
 import javax.net.ssl.HttpsURLConnection;
 
+import org.apache.commons.codec.binary.Base64;
+
 import jp.co.exacorp.matchingapp.util.Constants;
 import jp.co.exacorp.matchingapp.util.WatsonConstants;
-
-import org.apache.commons.codec.binary.Base64;
 
 /**
  * NaturalLanguageClassifier APIを取り扱うクラス
@@ -65,7 +65,10 @@ public class NLCContact {
 		if (jr != null) {
 			JsonObject jo = jr.readObject();
 			// 改行したいところでバーティカルバー入れてるので分割
-			return jo.getString("top_class").split("\\|");
+// 修正 START
+			return jo.getString("top_class").split("|");
+//			return jo.getString("top_class").split("\\|");
+// 修正 END
 		}
 		// 答えが空の場合
 		return new String[0];
