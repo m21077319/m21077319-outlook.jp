@@ -10,7 +10,8 @@ public class WatsonConstants {
 	public static final String PI_PASS = "I4KT2OKIruD1";
 
 	/** Natural Language Classifier URL */
-	public static final String NLC_URL = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/90e7acx197-nlc-99693/classify";
+//	public static final String NLC_URL = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/90e7acx197-nlc-99693/classify";
+	public static final String NLC_URL = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/359f41x201-nlc-24410/classify";
 	public static final String NLC_URL_F = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/";
 	public static final String NLC_URL_E = "/classify";
 	/** Natural Language Classifier UserName */
