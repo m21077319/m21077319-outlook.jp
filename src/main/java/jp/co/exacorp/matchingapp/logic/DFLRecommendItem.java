@@ -26,7 +26,7 @@ public class DFLRecommendItem {
 	private static final String ITEM_SELECT = "itemSelect";
 //	private static final String SELECT_ITEM_EXPLANATION = "おすすめのプラン";
 	private static final String SELECT_PLAN_EXPLANATION = "おすすめのプラン";
-	private static final String SELECT_PLAN1_EXPLANATION = "～詫び寂び～";
+	private static final String SELECT_PLAN1_EXPLANATION = "備前焼体験";
 	private static final String ITEM_EXPLANATION = "itemExplanation";
 	private static final String END = "もういいや";
 	private static final String UNRELATED = "unrelated";
