@@ -89,7 +89,9 @@ public class DFLRecommendItem {
 			sb.append(nlcResults[i]);
 			mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 		} else {
-//			sb.append(nlcResults[i]);
+			sb.append(nlcResults[i]).append("\n");
+			// デバッグ用に状態を出力
+			System.out.println(nlcResults[i]);
             if ("0000001" == nlcResults[i]) {
 			mesJab.add(makeCarousel5Item());
                 } else {
