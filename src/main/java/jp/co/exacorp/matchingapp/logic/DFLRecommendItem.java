@@ -95,9 +95,9 @@ public class DFLRecommendItem {
 
 			// レコメンド押下
 		} else {
-		   // おすすめプラン陶芸体験押下
+		// おすすめプラン陶芸体験押下
 	    	if (text.equals(SELECT_PLAN1_EXPLANATION)) {
-		    	mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+		 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
 
 			    // カルーセルで商品表示
 			    mesJab.add(makeCarousel5BItem());
@@ -108,7 +108,8 @@ public class DFLRecommendItem {
 			    qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT_BEFORE);
 
 			    // レコメンド押下
-		    } else {
+		    }
+		}
 
 
 		// 質問
@@ -121,18 +122,8 @@ public class DFLRecommendItem {
 		if (i == nlcResults.length - 1) {
 			sb.append(nlcResults[i]);
 		} else {
-//            if ("0000001".equals(nlcResults[i]) ) {
             if ("0000001".equals(nlcResults[i]) |
                 "0000002".equals(nlcResults[i]) ) {
-//            if ("0000001".equals(nlcResults[i]) |
-//				"0000002".equals(nlcResults[i]) |
-//				"0000003".equals(nlcResults[i]) |
-//				"0000004".equals(nlcResults[i]) |
-//				"0000005".equals(nlcResults[i]) |
-//				"0000006".equals(nlcResults[i]) |
-//				"0000007".equals(nlcResults[i]) |
-//				"0000008".equals(nlcResults[i]) |
-//				"0000009".equals(nlcResults[i]) ) {
 			mesJab.add(makeCarousel1Item());
                 }
 			}
@@ -144,9 +135,7 @@ public class DFLRecommendItem {
 
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
 			}
-		}
 	}
-}
 
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
