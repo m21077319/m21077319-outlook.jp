@@ -88,12 +88,6 @@ public class DFLRecommendItem {
 			// カルーセルで商品表示
 			mesJab.add(makeCarousel5AItem());
 
-			qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
-
-			// サブ状態に商品選択前を設定
-			qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT_BEFORE);
-
-			// レコメンド押下
 		} else {
 		// おすすめプラン陶芸体験押下
 	    	if (text.equals(SELECT_PLAN1_EXPLANATION)) {
@@ -101,15 +95,8 @@ public class DFLRecommendItem {
 
 			    // カルーセルで商品表示
 			    mesJab.add(makeCarousel5BItem());
-
-			    qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
-
-			    // サブ状態に商品選択前を設定
-			    qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT_BEFORE);
-
-			    // レコメンド押下
 		    }
-		}
+	    }
 
 
 		// 質問
@@ -127,6 +114,7 @@ public class DFLRecommendItem {
 			mesJab.add(makeCarousel1Item());
                 }
 			}
+		}
 
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
@@ -134,7 +122,6 @@ public class DFLRecommendItem {
 		System.out.println("---------- Logic End. ----------");
 
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
-			}
 	}
 
 
