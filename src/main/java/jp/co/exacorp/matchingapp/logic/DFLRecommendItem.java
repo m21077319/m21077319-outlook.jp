@@ -88,7 +88,7 @@ public class DFLRecommendItem {
 		if (i == nlcResults.length - 1) {
 			sb.append(nlcResults[i]);
 		} else {
-//			sb.append(nlcResults[i]).append("\n");
+			sb.append(nlcResults[i]);
             if ("0000001" == nlcResults[i]) {
 			mesJab.add(makeCarousel1Item());
                 } else {
