@@ -95,7 +95,8 @@ public class DFLRecommendItem {
 			// カルーセルでプラン表示
 			mesJab.add(makeCarousel5Item());
 		} else {
-			sb.append(nlcResults[1]).append("\n");
+//			sb.append(nlcResults[0]).append("\n");
+			sb.append(nlcResults[0]);
 			}
 
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
