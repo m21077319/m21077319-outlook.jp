@@ -197,7 +197,6 @@ public class DFLRecommendItem {
 		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
 		return carousel;
 		}
-}
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel5Item() {
