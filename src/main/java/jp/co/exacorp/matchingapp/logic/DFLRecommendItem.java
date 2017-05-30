@@ -88,15 +88,16 @@ public class DFLRecommendItem {
 		if (i == nlcResults.length - 1) {
 			sb.append(nlcResults[i]);
 		} else {
-            if ("0000001".equals(nlcResults[i]) |
-				"0000002".equals(nlcResults[i]) |
-				"0000003".equals(nlcResults[i]) |
-				"0000004".equals(nlcResults[i]) |
-				"0000005".equals(nlcResults[i]) |
-				"0000006".equals(nlcResults[i]) |
-				"0000007".equals(nlcResults[i]) |
-				"0000008".equals(nlcResults[i]) |
-				"0000009".equals(nlcResults[i]) ) {
+            if ("0000001".equals(nlcResults[i]) ) {
+//            if ("0000001".equals(nlcResults[i]) |
+//				"0000002".equals(nlcResults[i]) |
+//				"0000003".equals(nlcResults[i]) |
+//				"0000004".equals(nlcResults[i]) |
+//				"0000005".equals(nlcResults[i]) |
+//				"0000006".equals(nlcResults[i]) |
+//				"0000007".equals(nlcResults[i]) |
+//				"0000008".equals(nlcResults[i]) |
+//				"0000009".equals(nlcResults[i]) ) {
 			mesJab.add(makeCarousel1Item());
                 }
 			}
