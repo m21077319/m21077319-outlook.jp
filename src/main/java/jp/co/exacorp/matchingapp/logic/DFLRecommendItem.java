@@ -84,20 +84,20 @@ public class DFLRecommendItem {
 
 		String[] nlcResults = nlcc.getNLCResult(text, cid);
 		StringBuilder sb = new StringBuilder();
-//		for (int i = 0; i < nlcResults.length; i++) {
-//		if (i == nlcResults.length - 1) {
-//			sb.append(nlcResults[i]);
-//		} else {
-//			sb.append(nlcResults[i]).append("\n");
-//			}
-//		}
-		if (0 == nlcResults.length) {
-			// カルーセルでプラン表示
-			mesJab.add(makeCarousel5Item());
+		for (int i = 0; i < nlcResults.length; i++) {
+		if (i == nlcResults.length - 1) {
+			sb.append(nlcResults[i]);
 		} else {
-//			sb.append(nlcResults[0]).append("\n");
-			sb.append(nlcResults[1]);
+			sb.append(nlcResults[i]).append("\n");
 			}
+		}
+//		if (0 == nlcResults.length) {
+//			// カルーセルでプラン表示
+//			mesJab.add(makeCarousel5Item());
+//		} else {
+////			sb.append(nlcResults[0]).append("\n");
+//			sb.append(nlcResults[1]);
+//			}
 
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
