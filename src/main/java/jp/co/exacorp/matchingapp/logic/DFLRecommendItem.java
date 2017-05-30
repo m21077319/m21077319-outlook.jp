@@ -26,6 +26,7 @@ public class DFLRecommendItem {
 	private static final String ITEM_SELECT = "itemSelect";
 //	private static final String SELECT_ITEM_EXPLANATION = "おすすめのプラン";
 	private static final String SELECT_PLAN_EXPLANATION = "おすすめのプラン";
+	private static final String SELECT_PLAN1_EXPLANATION = "～詫び寂び～";
 	private static final String ITEM_EXPLANATION = "itemExplanation";
 	private static final String END = "もういいや";
 	private static final String UNRELATED = "unrelated";
@@ -93,8 +94,21 @@ public class DFLRecommendItem {
 			qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT_BEFORE);
 
 			// レコメンド押下
-		}
+		} else {
+		   // おすすめプラン陶芸体験押下
+	    	if (text.equals(SELECT_PLAN1_EXPLANATION)) {
+		    	mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
 
+			    // カルーセルで商品表示
+			    mesJab.add(makeCarousel5BItem());
+
+			    qMap.put(LINEConstants.STATE, ITEM_EXPLANATION);
+
+			    // サブ状態に商品選択前を設定
+			    qMap.put(LINEConstants.STATE_SUB, ITEM_SELECT_BEFORE);
+
+			    // レコメンド押下
+		    } else {
 
 
 		// 質問
@@ -130,6 +144,8 @@ public class DFLRecommendItem {
 		System.out.println("---------- Logic End. ----------");
 
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
+			}
+		}
 	}
 
 
@@ -170,8 +186,8 @@ public class DFLRecommendItem {
 				DFLConstants.PREMIRE_RECEIVE_PL2));
 		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
 				+ DFLConstants.PREMIRE_RECEIVE_PL2_IMG,
-				DFLConstants.PREMIRE_RECEIVE_GLB,
-				DFLConstants.PREMIRE_RECEIVE_GLB_TXT, action2));
+				DFLConstants.PREMIRE_RECEIVE_PL2,
+				DFLConstants.PREMIRE_RECEIVE_PL2_TXT, action2));
 
 		action3.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
 				DFLConstants.PREMIRE_RECEIVE_PL3));
@@ -198,6 +214,54 @@ public class DFLRecommendItem {
 		return carousel;
 		}
 
+	/** おすすめプラン備前焼体験のカルーセルを返す */
+	private JsonObjectBuilder makeCarousel5BItem() {
+		JsonArrayBuilder columns = Json.createArrayBuilder();
+		JsonArrayBuilder action1 = Json.createArrayBuilder();
+		JsonArrayBuilder action2 = Json.createArrayBuilder();
+		JsonArrayBuilder action3 = Json.createArrayBuilder();
+		JsonArrayBuilder action4 = Json.createArrayBuilder();
+		JsonArrayBuilder action5 = Json.createArrayBuilder();
+		JsonObjectBuilder carousel = Json.createObjectBuilder();
+
+		action1.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_PL6));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_PL6_IMG,
+				DFLConstants.PREMIRE_RECEIVE_PL6,
+				DFLConstants.PREMIRE_RECEIVE_PL6_TXT, action1));
+
+		action2.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_PL7));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_PL7_IMG,
+				DFLConstants.PREMIRE_RECEIVE_PL7,
+				DFLConstants.PREMIRE_RECEIVE_PL7_TXT, action2));
+
+		action3.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_PL8));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_PL8_IMG,
+				DFLConstants.PREMIRE_RECEIVE_PL8,
+				DFLConstants.PREMIRE_RECEIVE_PL8_TXT, action3));
+
+		action4.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_PL9));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_PL9_IMG,
+				DFLConstants.PREMIRE_RECEIVE_PL9,
+				DFLConstants.PREMIRE_RECEIVE_PL9_TXT, action4));
+
+		action5.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_P10));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_P10_IMG,
+				DFLConstants.PREMIRE_RECEIVE_P10,
+				DFLConstants.PREMIRE_RECEIVE_P10_TXT, action5));
+
+		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
+		return carousel;
+		}
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel5Item() {
 		JsonArrayBuilder columns = Json.createArrayBuilder();
