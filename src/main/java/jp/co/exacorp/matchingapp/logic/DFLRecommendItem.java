@@ -91,12 +91,12 @@ public class DFLRecommendItem {
 //			sb.append(nlcResults[i]).append("\n");
 //			}
 //		}
-		if (1 == nlcResults.length) {
+		if (0 == nlcResults.length) {
 			// カルーセルでプラン表示
 			mesJab.add(makeCarousel5Item());
 		} else {
 //			sb.append(nlcResults[0]).append("\n");
-			sb.append(nlcResults[0]);
+			sb.append(nlcResults[1]);
 			}
 
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
