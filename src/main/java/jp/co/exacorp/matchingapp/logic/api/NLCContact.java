@@ -66,8 +66,8 @@ public class NLCContact {
 			JsonObject jo = jr.readObject();
 			// 改行したいところでバーティカルバー入れてるので分割
 // 修正 START
-			return jo.getString("top_class").split("|");
-//			return jo.getString("top_class").split("\\|");
+//			return jo.getString("top_class").split("|");
+			return jo.getString("top_class").split("\\|");
 // 修正 END
 		}
 		// 答えが空の場合
