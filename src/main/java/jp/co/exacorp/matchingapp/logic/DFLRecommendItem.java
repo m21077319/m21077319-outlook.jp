@@ -86,26 +86,21 @@ public class DFLRecommendItem {
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < nlcResults.length; i++) {
 		if (i == nlcResults.length - 1) {
-//			sb.append(nlcResults[i]);
-//			mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
+			sb.append(nlcResults[i]);
 		} else {
-			sb.append(nlcResults[i]).append("\n");
-			// デバッグ用に状態を出力
-			System.out.println(nlcResults[i]);
-            if ("0000001".equals(nlcResults[i])) {
-			mesJab.add(makeCarousel5Item());
-                } else {
-        			mesJab.add(makeCarousel1Item());
+            if ("0000001".equals(nlcResults[i]) |
+				"0000002".equals(nlcResults[i]) |
+				"0000003".equals(nlcResults[i]) |
+				"0000004".equals(nlcResults[i]) |
+				"0000005".equals(nlcResults[i]) |
+				"0000006".equals(nlcResults[i]) |
+				"0000007".equals(nlcResults[i]) |
+				"0000008".equals(nlcResults[i]) |
+				"0000009".equals(nlcResults[i]) ) {
+			mesJab.add(makeCarousel1Item());
                 }
 			}
 		}
-//		if (0 == nlcResults.length) {
-//			// カルーセルでプラン表示
-//			mesJab.add(makeCarousel5Item());
-//		} else {
-////			sb.append(nlcResults[0]).append("\n");
-//			sb.append(nlcResults[1]);
-//			}
 
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
@@ -123,11 +118,11 @@ public class DFLRecommendItem {
 		JsonObjectBuilder carousel = Json.createObjectBuilder();
 
 		action1.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
-				DFLConstants.PREMIRE_RECEIVE_GLB));
+				DFLConstants.PREMIRE_RECEIVE_FIS));
 		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
-				+ DFLConstants.PREMIRE_RECEIVE_GLB_IMG,
-				DFLConstants.PREMIRE_RECEIVE_GLB,
-				DFLConstants.PREMIRE_RECEIVE_GLB_TXT, action1));
+				+ DFLConstants.PREMIRE_RECEIVE_FIS_IMG,
+				DFLConstants.PREMIRE_RECEIVE_FIS,
+				DFLConstants.PREMIRE_RECEIVE_FIS_TXT, action1));
 
 		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
 		return carousel;

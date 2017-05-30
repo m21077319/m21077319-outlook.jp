@@ -69,4 +69,11 @@ public class DFLConstants {
 	public static final String PREMIRE_GIFT2_AUS_TXT = "-積立利率変動型終身保険（豪ドル建）-";
 	public static final String PREMIRE_GIFT2_AUS_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=140&agency=27";
 	public static final String PREMIRE_GIFT2_AUS_IMG = "pre_gift.jpg";
+	/** 表情１ */
+	public static final String PREMIRE_RECEIVE_FIS = "";
+	public static final String PREMIRE_RECEIVE_FIS_TXT = "";
+	public static final String PREMIRE_RECEIVE_FIS_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
+	public static final String PREMIRE_RECEIVE_FIS_IMG = "pre_fice_test1.jpg";
+	public static final String PREMIER_RECIEVE_FIS_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+	public static final String PREMIRE_RECEIVE_FIS_AUDIO = "premierRecieve.m4a";
 }
