@@ -136,7 +136,6 @@ public class DFLRecommendItem {
 			mesJab.add(makeCarousel1Item());
                 }
 			}
-		}
 
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
@@ -147,6 +146,7 @@ public class DFLRecommendItem {
 			}
 		}
 	}
+}
 
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
