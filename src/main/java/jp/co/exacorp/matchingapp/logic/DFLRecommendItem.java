@@ -87,8 +87,9 @@ public class DFLRecommendItem {
 		for (int i = 0; i < nlcResults.length; i++) {
 		if (i == nlcResults.length - 1) {
 			sb.append(nlcResults[i]);
+			mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 		} else {
-			sb.append(nlcResults[i]);
+//			sb.append(nlcResults[i]);
             if ("0000001" == nlcResults[i]) {
 			mesJab.add(makeCarousel5Item());
                 } else {
@@ -104,7 +105,7 @@ public class DFLRecommendItem {
 //			sb.append(nlcResults[1]);
 //			}
 
-		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
+//		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
 
 		// デバッグ用に状態を出力
 		System.out.println("---------- Logic End. ----------");
