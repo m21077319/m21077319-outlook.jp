@@ -87,10 +87,13 @@ public class DFLRecommendItem {
 		for (int i = 0; i < nlcResults.length; i++) {
 		if (i == nlcResults.length - 1) {
 			sb.append(nlcResults[i]);
- 			mesJab.add(makeCarousel5Item());
 		} else {
 //			sb.append(nlcResults[i]).append("\n");
- 			mesJab.add(makeCarousel5Item());
+            if ("0000001" == nlcResults[i]) {
+			mesJab.add(makeCarousel1Item());
+                } else {
+        			mesJab.add(makeCarousel5Item());
+                }
 			}
 		}
 //		if (0 == nlcResults.length) {
@@ -107,6 +110,24 @@ public class DFLRecommendItem {
 		System.out.println("---------- Logic End. ----------");
 
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
+	}
+
+
+	/** 営業職員さんが扱える三種類のカルーセルを返す */
+	private JsonObjectBuilder makeCarousel1Item() {
+		JsonArrayBuilder columns = Json.createArrayBuilder();
+		JsonArrayBuilder action1 = Json.createArrayBuilder();
+		JsonObjectBuilder carousel = Json.createObjectBuilder();
+
+		action1.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_RECEIVE_GLB));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_RECEIVE_GLB_IMG,
+				DFLConstants.PREMIRE_RECEIVE_GLB,
+				DFLConstants.PREMIRE_RECEIVE_GLB_TXT, action1));
+
+		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
+		return carousel;
 	}
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
@@ -156,9 +177,7 @@ public class DFLRecommendItem {
 
 		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
 		return carousel;
-// 追加 START
 		}
-//追加 END
 }
 
 ////追加 END
