@@ -69,6 +69,41 @@ public class DFLConstants {
 	public static final String PREMIRE_GIFT2_AUS_TXT = "-積立利率変動型終身保険（豪ドル建）-";
 	public static final String PREMIRE_GIFT2_AUS_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=140&agency=27";
 	public static final String PREMIRE_GIFT2_AUS_IMG = "pre_gift.jpg";
+	/** おすすめプラン１ */
+	public static final String PREMIRE_RECEIVE_PL1 = "備前焼体験";
+	public static final String PREMIRE_RECEIVE_PL1_TXT = "～詫び寂び～";
+	public static final String PREMIRE_RECEIVE_PL1_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
+	public static final String PREMIRE_RECEIVE_PL1_IMG = "plan_01.jpg";
+	public static final String PREMIER_RECIEVE_PL1_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+	public static final String PREMIRE_RECEIVE_PL1_AUDIO = "premierRecieve.m4a";
+	/** おすすめプラン２ */
+	public static final String PREMIRE_RECEIVE_PL2 = "川船クルージング";
+	public static final String PREMIRE_RECEIVE_PL2_TXT = "～江戸の粋を体感～";
+	public static final String PREMIRE_RECEIVE_PL2_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
+	public static final String PREMIRE_RECEIVE_PL2_IMG = "plan_02.jpg";
+	public static final String PREMIER_RECIEVE_PL2_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+	public static final String PREMIRE_RECEIVE_PL2_AUDIO = "premierRecieve.m4a";
+	/** おすすめプラン３ */
+	public static final String PREMIRE_RECEIVE_PL3 = "ジャパニーズアートを体感";
+	public static final String PREMIRE_RECEIVE_PL3_TXT = "～歌舞伎メークとストーリ～";
+	public static final String PREMIRE_RECEIVE_PL3_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
+	public static final String PREMIRE_RECEIVE_PL3_IMG = "plan_03.jpg";
+	public static final String PREMIER_RECIEVE_PL3_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+	public static final String PREMIRE_RECEIVE_PL3_AUDIO = "premierRecieve.m4a";
+	/** おすすめプラン４ */
+	public static final String PREMIRE_RECEIVE_PL4 = "倉敷の古都を町歩き";
+	public static final String PREMIRE_RECEIVE_PL4_TXT = "～○○に学ぶ女性の美しい品格～";
+	public static final String PREMIRE_RECEIVE_PL4_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
+	public static final String PREMIRE_RECEIVE_PL4_IMG = "plan_04.jpg";
+	public static final String PREMIER_RECIEVE_PL4_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+	public static final String PREMIRE_RECEIVE_PL4_AUDIO = "premierRecieve.m4a";
+	/** おすすめプラン５ */
+	public static final String PREMIRE_RECEIVE_PL5 = "銘酒テースティングツアー";
+	public static final String PREMIRE_RECEIVE_PL5_TXT = "～杜氏の酒蔵・酒徹底解説～";
+	public static final String PREMIRE_RECEIVE_PL5_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
+	public static final String PREMIRE_RECEIVE_PL5_IMG = "plan_05.jpg";
+	public static final String PREMIER_RECIEVE_PL5_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
+	public static final String PREMIRE_RECEIVE_PL5_AUDIO = "premierRecieve.m4a";
 	/** 表情１ */
 	public static final String PREMIRE_RECEIVE_FIS = "";
 	public static final String PREMIRE_RECEIVE_FIS_TXT = "";
