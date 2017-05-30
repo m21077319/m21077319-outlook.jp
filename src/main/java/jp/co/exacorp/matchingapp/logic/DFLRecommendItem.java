@@ -86,10 +86,11 @@ public class DFLRecommendItem {
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < nlcResults.length; i++) {
 		if (i == nlcResults.length - 1) {
-//			sb.append(nlcResults[i]);
+			sb.append(nlcResults[i]);
  			mesJab.add(makeCarousel5Item());
 		} else {
-			sb.append(nlcResults[i]).append("\n");
+//			sb.append(nlcResults[i]).append("\n");
+ 			mesJab.add(makeCarousel5Item());
 			}
 		}
 //		if (0 == nlcResults.length) {
