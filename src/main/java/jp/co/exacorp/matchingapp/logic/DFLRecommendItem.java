@@ -115,7 +115,7 @@ public class DFLRecommendItem {
 //                "0000002".equals(nlcResults[i]) ) {
           if ("0000001".equals(nlcResults[i]) &
         	  !text.equals(SELECT_PLAN_EXPLANATION) &
-      		  !text.equals(SELECT_PLAN1_EXPLANATION)) {
+      		    !text.equals(SELECT_PLAN1_EXPLANATION)) {
 			mesJab.add(makeCarousel1Item());
                 }
 			}
@@ -138,11 +138,11 @@ public class DFLRecommendItem {
 		JsonObjectBuilder carousel = Json.createObjectBuilder();
 
 		action1.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
-				DFLConstants.PREMIRE_RECEIVE_GLB));
+				DFLConstants.PREMIRE_RECEIVE_FIS));
 		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
-				+ DFLConstants.PREMIRE_RECEIVE_GLB_IMG,
-				DFLConstants.PREMIRE_RECEIVE_GLB,
-				DFLConstants.PREMIRE_RECEIVE_GLB_TXT, action1));
+				+ DFLConstants.PREMIRE_RECEIVE_FIS_IMG,
+				DFLConstants.PREMIRE_RECEIVE_FIS,
+				DFLConstants.PREMIRE_RECEIVE_FIS_TXT, action1));
 
 		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
 		return carousel;
