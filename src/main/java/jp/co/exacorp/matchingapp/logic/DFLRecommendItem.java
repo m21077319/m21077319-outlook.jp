@@ -101,8 +101,8 @@ public class DFLRecommendItem {
 
 		// 質問
 		// NLCにテキスト投げて返ってきた結果を表示させる
-		if (!text.equals(SELECT_PLAN_EXPLANATION) &
-		    !text.equals(SELECT_PLAN1_EXPLANATION)) {
+//		if (!text.equals(SELECT_PLAN_EXPLANATION) &
+//		    !text.equals(SELECT_PLAN1_EXPLANATION)) {
 		String cid = dflii.getCID(qMap.get(ITEM));
 
 		String[] nlcResults = nlcc.getNLCResult(text, cid);
@@ -111,8 +111,11 @@ public class DFLRecommendItem {
 		if (i == nlcResults.length - 1) {
 			sb.append(nlcResults[i]);
 		} else {
-            if ("0000001".equals(nlcResults[i]) |
-                "0000002".equals(nlcResults[i]) ) {
+//            if ("0000001".equals(nlcResults[i]) |
+//                "0000002".equals(nlcResults[i]) ) {
+          if ("0000001".equals(nlcResults[i]) &
+        	  !text.equals(SELECT_PLAN_EXPLANATION) &
+      		  !text.equals(SELECT_PLAN1_EXPLANATION)) {
 			mesJab.add(makeCarousel1Item());
                 }
 			}
@@ -125,7 +128,7 @@ public class DFLRecommendItem {
 
 		return MessageAPIUtil.makeRequestJson(replyToken, mesJab);
 	}
-}
+//}
 
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
