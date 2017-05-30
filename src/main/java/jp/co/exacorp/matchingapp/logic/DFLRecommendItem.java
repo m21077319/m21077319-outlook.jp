@@ -90,9 +90,9 @@ public class DFLRecommendItem {
 		} else {
 			sb.append(nlcResults[i]);
             if ("0000001" == nlcResults[i]) {
-			mesJab.add(makeCarousel1Item());
+			mesJab.add(makeCarousel5Item());
                 } else {
-        			mesJab.add(makeCarousel5Item());
+        			mesJab.add(makeCarousel1Item());
                 }
 			}
 		}
