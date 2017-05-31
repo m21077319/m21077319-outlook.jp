@@ -83,68 +83,60 @@ public class DFLRecommendItem {
 		// テキスト取得
 		String text = eventMap.get(LINEConstants.TEXT);
 
-//		// おすすめプラン押下
-//		if (text.equals(SELECT_PLAN_EXPLANATION)) {
-//			mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
-//
-//			// カルーセルで商品表示
-//			mesJab.add(makeCarousel5AItem());
-//
-//		} else {
-//		// おすすめプラン陶芸体験押下
-//	    	if (text.equals(SELECT_PLAN1_EXPLANATION)) {
-//		 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
-//
-//			    // カルーセルで商品表示
-//			    mesJab.add(makeCarousel5BItem());
-//		    }else {
-//				// 観光ニュース
-//		    	if (text.equals(SELECT_NEWS1_EXPLANATION)) {
-//			 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
-//
-//				    // カルーセルで商品表示
-//				    mesJab.add(makeCarousel5CItem());
-//			    }else {
-//					// 観光ニュース２
-//			    	if (text.equals(SELECT_NEWS2_EXPLANATION)) {
-//				 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
-//
-//					    // カルーセルで商品表示
-//					    mesJab.add(makeCarousel5CItem());
-//				    }
-//		    }
-//	    }
-
-
-		switch (text) {
 		// おすすめプラン押下
-		case SELECT_PLAN_EXPLANATION:
-	 		mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
+		if (text.equals(SELECT_PLAN_EXPLANATION)) {
+			mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
 
-		    // カルーセルでプラン表示
-		    mesJab.add(makeCarousel5AItem());
+			// カルーセルでプラン表示
+			mesJab.add(makeCarousel5AItem());
 
-		// おすすめプラン陶芸体験押下
-		case SELECT_PLAN1_EXPLANATION:
-	 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+		} else if (text.equals(SELECT_PLAN1_EXPLANATION)) {
+		 	mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
 
-		    // カルーセルでスポット表示
-		    mesJab.add(makeCarousel5BItem());
+			// カルーセルでスポット表示
+			    mesJab.add(makeCarousel5BItem());
+		} else if (text.equals(SELECT_NEWS1_EXPLANATION)) {
+			mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
 
-		// ＮＥＷＳ１押下
-		case SELECT_NEWS1_EXPLANATION:
-	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+			// カルーセルでニュース表示
+			mesJab.add(makeCarousel5CItem());
+		} else if (text.equals(SELECT_NEWS2_EXPLANATION)) {
+			mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
 
-		    // カルーセルでニュース１表示
-		    mesJab.add(makeCarousel5CItem());
-
-		    // ＮＥＷＳ１押下
-		case SELECT_NEWS2_EXPLANATION:
-	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
-
-		    // カルーセルでニュース２表示
-		    mesJab.add(makeCarousel2AItem());
+			// カルーセルでニュース表示
+			mesJab.add(makeCarousel2AItem());
 		}
+
+//
+//		switch (text) {
+//		// おすすめプラン押下
+//		case SELECT_PLAN_EXPLANATION:
+//	 		mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
+//
+//		    // カルーセルでプラン表示
+//		    mesJab.add(makeCarousel5AItem());
+//
+//		// おすすめプラン陶芸体験押下
+//		case SELECT_PLAN1_EXPLANATION:
+//	 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+//
+//		    // カルーセルでスポット表示
+//		    mesJab.add(makeCarousel5BItem());
+//
+//		// ＮＥＷＳ１押下
+//		case SELECT_NEWS1_EXPLANATION:
+//	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+//
+//		    // カルーセルでニュース１表示
+//		    mesJab.add(makeCarousel5CItem());
+//
+//		    // ＮＥＷＳ１押下
+//		case SELECT_NEWS2_EXPLANATION:
+//	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+//
+//		    // カルーセルでニュース２表示
+//		    mesJab.add(makeCarousel2AItem());
+//		}
 
 
 		// 質問
