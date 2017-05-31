@@ -117,9 +117,10 @@ public class DFLRecommendItem {
 			if (i == nlcResults.length - 1) {
 				sb.append(nlcResults[i]);
 			} else {
-			if ("0000001".equals(nlcResults[i]) &
-       	 	  !text.equals(SELECT_PLAN_EXPLANATION) &
-			  !text.equals(SELECT_PLAN1_EXPLANATION)) {
+//			if ("0000001".equals(nlcResults[i]) &
+//       	 	  !text.equals(SELECT_PLAN_EXPLANATION) &
+//			  !text.equals(SELECT_PLAN1_EXPLANATION)) {
+				if ("0000001".equals(nlcResults[i]) ) {
 				mesJab.add(makeCarousel1Item());
        			}
 			}
