@@ -109,7 +109,7 @@ public class DFLConstants {
 	public static final String PREMIRE_RECEIVE_PL6 = "大原美術館";
 	public static final String PREMIRE_RECEIVE_PL6_TXT = "（備前焼の美しさ）";
 	public static final String PREMIRE_RECEIVE_PL6_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_RECEIVE_PL6_IMG = "plan_01.jpg";
+	public static final String PREMIRE_RECEIVE_PL6_IMG = "plan_21.jpg";
 	public static final String PREMIER_RECIEVE_PL6_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_RECEIVE_PL6_AUDIO = "premierRecieve.m4a";
 	/** おすすめプラン２ */
