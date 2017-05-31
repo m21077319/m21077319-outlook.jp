@@ -116,28 +116,28 @@ public class DFLConstants {
 	public static final String PREMIRE_RECEIVE_PL7 = "食事";
 	public static final String PREMIRE_RECEIVE_PL7_TXT = "（備前と郷土料理）";
 	public static final String PREMIRE_RECEIVE_PL7_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_RECEIVE_PL7_IMG = "plan_12.jpg";
+	public static final String PREMIRE_RECEIVE_PL7_IMG = "plan_22.jpg";
 	public static final String PREMIER_RECIEVE_PL7_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_RECEIVE_PL7_AUDIO = "premierRecieve.m4a";
 	/** おすすめプラン３ */
 	public static final String PREMIRE_RECEIVE_PL8 = "川船";
 	public static final String PREMIRE_RECEIVE_PL8_TXT = "（江戸の超著）";
 	public static final String PREMIRE_RECEIVE_PL8_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_RECEIVE_PL8_IMG = "plan_13.jpg";
+	public static final String PREMIRE_RECEIVE_PL8_IMG = "plan_23.jpg";
 	public static final String PREMIER_RECIEVE_PL8_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_RECEIVE_PL8_AUDIO = "premierRecieve.m4a";
 	/** おすすめプラン４ */
 	public static final String PREMIRE_RECEIVE_PL9 = "お茶体験";
 	public static final String PREMIRE_RECEIVE_PL9_TXT = "備前と茶の湯";
 	public static final String PREMIRE_RECEIVE_PL9_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_RECEIVE_PL9_IMG = "plan_14.jpg";
+	public static final String PREMIRE_RECEIVE_PL9_IMG = "plan_24.jpg";
 	public static final String PREMIER_RECIEVE_PL9_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_RECEIVE_PL9_AUDIO = "premierRecieve.m4a";
 	/** おすすめプラン５ */
 	public static final String PREMIRE_RECEIVE_P10 = "陶芸体験";
 	public static final String PREMIRE_RECEIVE_P10_TXT = "参考となる作品、焼き色の出し方";
 	public static final String PREMIRE_RECEIVE_P10_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_RECEIVE_P10_IMG = "plan_15.jpg";
+	public static final String PREMIRE_RECEIVE_P10_IMG = "plan_25.jpg";
 	public static final String PREMIER_RECIEVE_P10_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_RECEIVE_P10_AUDIO = "premierRecieve.m4a";
 	/** 表情１ */
