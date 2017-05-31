@@ -150,35 +150,35 @@ public class DFLConstants {
 	/** ニュース */
 	/** ニュース１ */
 	public static final String PREMIRE_NEWS_001 = "アプリでハラル料理サポート";
-	public static final String PREMIRE_NEWS_001_TXT = "（備前焼の美しさ）";
+	public static final String PREMIRE_NEWS_001_TXT = "";
 	public static final String PREMIRE_NEWS_001_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_NEWS_001_IMG = "News_Cooking App.jpg";
+	public static final String PREMIRE_NEWS_001_IMG = "News_Cooking_App.jpg";
 	public static final String PREMIER_NEWS_001_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_NEWS_001_AUDIO = "premierRecieve.m4a";
 	/** ニュース２ */
 	public static final String PREMIRE_NEWS_002 = "観光県 公衆トイレで誘客作戦";
-	public static final String PREMIRE_NEWS_002_TXT = "（備前焼の美しさ）";
+	public static final String PREMIRE_NEWS_002_TXT = "";
 	public static final String PREMIRE_NEWS_002_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
 	public static final String PREMIRE_NEWS_002_IMG = "News_toilet.jpg";
 	public static final String PREMIER_NEWS_002_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_NEWS_002_AUDIO = "premierRecieve.m4a";
 	/** ニュース３ */
 	public static final String PREMIRE_NEWS_003 = "空の駅まで４５秒　旧余部鉄橋にガラス張りエレベーター";
-	public static final String PREMIRE_NEWS_003_TXT = "（備前焼の美しさ）";
+	public static final String PREMIRE_NEWS_003_TXT = "";
 	public static final String PREMIRE_NEWS_003_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
 	public static final String PREMIRE_NEWS_003_IMG = "News_glassware.jpg";
 	public static final String PREMIER_NEWS_003_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_NEWS_003_AUDIO = "premierRecieve.m4a";
 	/** ニュース４ */
 	public static final String PREMIRE_NEWS_004 = "江戸の風情ただよう倉敷美観地区を歩いて";
-	public static final String PREMIRE_NEWS_004_TXT = "（備前焼の美しさ）";
+	public static final String PREMIRE_NEWS_004_TXT = "";
 	public static final String PREMIRE_NEWS_004_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_NEWS_004_IMG = "News_Taste of Edo1.jpg";
+	public static final String PREMIRE_NEWS_004_IMG = "News_Taste_of_Edo1.jpg";
 	public static final String PREMIER_NEWS_004_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_NEWS_004_AUDIO = "premierRecieve.m4a";
 	/** ニュース５ */
 	public static final String PREMIRE_NEWS_005 = "寺社入場料に値上げ余地";
-	public static final String PREMIRE_NEWS_005_TXT = "（備前焼の美しさ）";
+	public static final String PREMIRE_NEWS_005_TXT = "";
 	public static final String PREMIRE_NEWS_005_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
 	public static final String PREMIRE_NEWS_005_IMG = "News_Temple1.jpg";
 	public static final String PREMIER_NEWS_005_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
@@ -187,14 +187,14 @@ public class DFLConstants {
 	public static final String PREMIRE_NEWS_006 = "美しき景観やデザイン・アートに浸ろう";
 	public static final String PREMIRE_NEWS_006_TXT = "（備前焼の美しさ）";
 	public static final String PREMIRE_NEWS_006_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_NEWS_006_IMG = "News_beautiful landscape.jpg";
+	public static final String PREMIRE_NEWS_006_IMG = "News_beautiful_landscape.jpg";
 	public static final String PREMIER_NEWS_006_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_NEWS_006_AUDIO = "premierRecieve.m4a";
 	/** ニュース７ */
 	public static final String PREMIRE_NEWS_007 = "有名人が「観光大使」効果は";
 	public static final String PREMIRE_NEWS_007_TXT = "（備前焼の美しさ）";
 	public static final String PREMIRE_NEWS_007_URL = "http://www.d-frontier-life.co.jp/products/product.html?product=63&agency=27";
-	public static final String PREMIRE_NEWS_007_IMG = "News_Tourism Ambassador.jpg";
+	public static final String PREMIRE_NEWS_007_IMG = "News_Tourism_Ambassador.jpg";
 	public static final String PREMIER_NEWS_007_NLC_CLASSIFIER_ID = "90e7acx197-nlc-77722";
 	public static final String PREMIRE_NEWS_007_AUDIO = "premierRecieve.m4a";
 }

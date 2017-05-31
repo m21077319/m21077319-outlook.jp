@@ -94,7 +94,7 @@ public class DFLRecommendItem {
 		 	mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
 
 			// カルーセルでスポット表示
-			    mesJab.add(makeCarousel5BItem());
+			mesJab.add(makeCarousel5BItem());
 		} else if (text.equals(SELECT_NEWS1_EXPLANATION)) {
 			mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
 
@@ -105,63 +105,28 @@ public class DFLRecommendItem {
 
 			// カルーセルでニュース表示
 			mesJab.add(makeCarousel2AItem());
-		}
-
-//
-//		switch (text) {
-//		// おすすめプラン押下
-//		case SELECT_PLAN_EXPLANATION:
-//	 		mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
-//
-//		    // カルーセルでプラン表示
-//		    mesJab.add(makeCarousel5AItem());
-//
-//		// おすすめプラン陶芸体験押下
-//		case SELECT_PLAN1_EXPLANATION:
-//	 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
-//
-//		    // カルーセルでスポット表示
-//		    mesJab.add(makeCarousel5BItem());
-//
-//		// ＮＥＷＳ１押下
-//		case SELECT_NEWS1_EXPLANATION:
-//	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
-//
-//		    // カルーセルでニュース１表示
-//		    mesJab.add(makeCarousel5CItem());
-//
-//		    // ＮＥＷＳ１押下
-//		case SELECT_NEWS2_EXPLANATION:
-//	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
-//
-//		    // カルーセルでニュース２表示
-//		    mesJab.add(makeCarousel2AItem());
-//		}
-
-
-		// 質問
-		// NLCにテキスト投げて返ってきた結果を表示させる
-//		if (!text.equals(SELECT_PLAN_EXPLANATION) &
-//		    !text.equals(SELECT_PLAN1_EXPLANATION)) {
-		String cid = dflii.getCID(qMap.get(ITEM));
-
-		String[] nlcResults = nlcc.getNLCResult(text, cid);
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < nlcResults.length; i++) {
-		if (i == nlcResults.length - 1) {
-			sb.append(nlcResults[i]);
 		} else {
-//            if ("0000001".equals(nlcResults[i]) |
-//                "0000002".equals(nlcResults[i]) ) {
-          if ("0000001".equals(nlcResults[i]) &
-        	  !text.equals(SELECT_PLAN_EXPLANATION) &
-      		    !text.equals(SELECT_PLAN1_EXPLANATION)) {
-			mesJab.add(makeCarousel1Item());
-                }
-			}
-		}
 
+			// 質問
+			// NLCにテキスト投げて返ってきた結果を表示させる
+			String cid = dflii.getCID(qMap.get(ITEM));
+
+			String[] nlcResults = nlcc.getNLCResult(text, cid);
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < nlcResults.length; i++) {
+			if (i == nlcResults.length - 1) {
+				sb.append(nlcResults[i]);
+			} else {
+			if ("0000001".equals(nlcResults[i]) &
+       	 	  !text.equals(SELECT_PLAN_EXPLANATION) &
+			  !text.equals(SELECT_PLAN1_EXPLANATION)) {
+				mesJab.add(makeCarousel1Item());
+       			}
+			}
+			}
 		mesJab.add(MessageAPIUtil.giveMessage(sb.toString()));
+
+		}
 
 		// デバッグ用に状態を出力
 		System.out.println("---------- Logic End. ----------");
