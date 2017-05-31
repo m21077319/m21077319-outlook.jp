@@ -27,6 +27,7 @@ public class DFLRecommendItem {
 //	private static final String SELECT_ITEM_EXPLANATION = "おすすめのプラン";
 	private static final String SELECT_PLAN_EXPLANATION = "おすすめのプラン";
 	private static final String SELECT_PLAN1_EXPLANATION = "備前焼体験";
+	private static final String SELECT_NEWS1_EXPLANATION = "観光ニュース";
 	private static final String ITEM_EXPLANATION = "itemExplanation";
 	private static final String END = "もういいや";
 	private static final String UNRELATED = "unrelated";
@@ -95,6 +96,14 @@ public class DFLRecommendItem {
 
 			    // カルーセルで商品表示
 			    mesJab.add(makeCarousel5BItem());
+		    }else {
+				// 観光ニュース
+		    	if (text.equals(SELECT_NEWS1_EXPLANATION)) {
+			 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+
+				    // カルーセルで商品表示
+				    mesJab.add(makeCarousel5CItem());
+			    }
 		    }
 	    }
 
@@ -244,6 +253,81 @@ public class DFLRecommendItem {
 		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
 		return carousel;
 		}
+
+	/** ニュース１のカルーセルを返す */
+	private JsonObjectBuilder makeCarousel5CItem() {
+		JsonArrayBuilder columns = Json.createArrayBuilder();
+		JsonArrayBuilder action1 = Json.createArrayBuilder();
+		JsonArrayBuilder action2 = Json.createArrayBuilder();
+		JsonArrayBuilder action3 = Json.createArrayBuilder();
+		JsonArrayBuilder action4 = Json.createArrayBuilder();
+		JsonArrayBuilder action5 = Json.createArrayBuilder();
+		JsonObjectBuilder carousel = Json.createObjectBuilder();
+
+		action1.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_001));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_001_IMG,
+				DFLConstants.PREMIRE_NEWS_001,
+				DFLConstants.PREMIRE_NEWS_001_TXT, action1));
+
+		action2.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_002));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_002_IMG,
+				DFLConstants.PREMIRE_NEWS_002,
+				DFLConstants.PREMIRE_NEWS_002_TXT, action2));
+
+		action3.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_003));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_003_IMG,
+				DFLConstants.PREMIRE_NEWS_003,
+				DFLConstants.PREMIRE_NEWS_003_TXT, action3));
+
+		action4.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_004));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_004_IMG,
+				DFLConstants.PREMIRE_NEWS_004,
+				DFLConstants.PREMIRE_NEWS_004_TXT, action4));
+
+		action5.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_005));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_005_IMG,
+				DFLConstants.PREMIRE_NEWS_005,
+				DFLConstants.PREMIRE_NEWS_005_TXT, action5));
+
+		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
+		return carousel;
+		}
+
+	/** ニュース２のカルーセルを返す */
+	private JsonObjectBuilder makeCarousel3AItem() {
+		JsonArrayBuilder columns = Json.createArrayBuilder();
+		JsonArrayBuilder action1 = Json.createArrayBuilder();
+		JsonArrayBuilder action2 = Json.createArrayBuilder();
+		JsonObjectBuilder carousel = Json.createObjectBuilder();
+
+		action1.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_006));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_006_IMG,
+				DFLConstants.PREMIRE_NEWS_006,
+				DFLConstants.PREMIRE_NEWS_006_TXT, action1));
+
+		action2.add(MessageAPIforDFLUtil.giveMes4Actions("これにする",
+				DFLConstants.PREMIRE_NEWS_007));
+		columns.add(MessageAPIUtil.giveColumns4Carousel(Constants.IMG_URL
+				+ DFLConstants.PREMIRE_NEWS_007_IMG,
+				DFLConstants.PREMIRE_NEWS_007,
+				DFLConstants.PREMIRE_NEWS_007_TXT, action2));
+
+		carousel = MessageAPIUtil.giveCarousel("プラン一覧カルーセル", columns);
+		return carousel;
+		}
+
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel5Item() {
 		JsonArrayBuilder columns = Json.createArrayBuilder();
