@@ -28,6 +28,7 @@ public class DFLRecommendItem {
 	private static final String SELECT_PLAN_EXPLANATION = "おすすめのプラン";
 	private static final String SELECT_PLAN1_EXPLANATION = "備前焼体験";
 	private static final String SELECT_NEWS1_EXPLANATION = "観光ニュース";
+	private static final String SELECT_NEWS2_EXPLANATION = "観光ニュースつづき";
 	private static final String ITEM_EXPLANATION = "itemExplanation";
 	private static final String END = "もういいや";
 	private static final String UNRELATED = "unrelated";
@@ -82,30 +83,68 @@ public class DFLRecommendItem {
 		// テキスト取得
 		String text = eventMap.get(LINEConstants.TEXT);
 
+//		// おすすめプラン押下
+//		if (text.equals(SELECT_PLAN_EXPLANATION)) {
+//			mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
+//
+//			// カルーセルで商品表示
+//			mesJab.add(makeCarousel5AItem());
+//
+//		} else {
+//		// おすすめプラン陶芸体験押下
+//	    	if (text.equals(SELECT_PLAN1_EXPLANATION)) {
+//		 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+//
+//			    // カルーセルで商品表示
+//			    mesJab.add(makeCarousel5BItem());
+//		    }else {
+//				// 観光ニュース
+//		    	if (text.equals(SELECT_NEWS1_EXPLANATION)) {
+//			 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+//
+//				    // カルーセルで商品表示
+//				    mesJab.add(makeCarousel5CItem());
+//			    }else {
+//					// 観光ニュース２
+//			    	if (text.equals(SELECT_NEWS2_EXPLANATION)) {
+//				 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+//
+//					    // カルーセルで商品表示
+//					    mesJab.add(makeCarousel5CItem());
+//				    }
+//		    }
+//	    }
+
+
+		switch (text) {
 		// おすすめプラン押下
-		if (text.equals(SELECT_PLAN_EXPLANATION)) {
-			mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
+		case SELECT_PLAN_EXPLANATION:
+	 		mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
 
-			// カルーセルで商品表示
-			mesJab.add(makeCarousel5AItem());
+		    // カルーセルでプラン表示
+		    mesJab.add(makeCarousel5AItem());
 
-		} else {
 		// おすすめプラン陶芸体験押下
-	    	if (text.equals(SELECT_PLAN1_EXPLANATION)) {
-		 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+		case SELECT_PLAN1_EXPLANATION:
+	 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
 
-			    // カルーセルで商品表示
-			    mesJab.add(makeCarousel5BItem());
-		    }else {
-				// 観光ニュース
-		    	if (text.equals(SELECT_NEWS1_EXPLANATION)) {
-			 		mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
+		    // カルーセルでスポット表示
+		    mesJab.add(makeCarousel5BItem());
 
-				    // カルーセルで商品表示
-				    mesJab.add(makeCarousel5CItem());
-			    }
-		    }
-	    }
+		// ＮＥＷＳ１押下
+		case SELECT_NEWS1_EXPLANATION:
+	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+
+		    // カルーセルでニュース１表示
+		    mesJab.add(makeCarousel5CItem());
+
+		    // ＮＥＷＳ１押下
+		case SELECT_NEWS2_EXPLANATION:
+	 		mesJab.add(MessageAPIUtil.giveMessage("気になるニュースを選んでください"));
+
+		    // カルーセルでニュース２表示
+		    mesJab.add(makeCarousel2AItem());
+		}
 
 
 		// 質問
@@ -304,7 +343,7 @@ public class DFLRecommendItem {
 		}
 
 	/** ニュース２のカルーセルを返す */
-	private JsonObjectBuilder makeCarousel3AItem() {
+	private JsonObjectBuilder makeCarousel2AItem() {
 		JsonArrayBuilder columns = Json.createArrayBuilder();
 		JsonArrayBuilder action1 = Json.createArrayBuilder();
 		JsonArrayBuilder action2 = Json.createArrayBuilder();
