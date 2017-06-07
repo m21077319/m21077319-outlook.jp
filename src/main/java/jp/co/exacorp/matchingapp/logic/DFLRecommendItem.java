@@ -94,7 +94,7 @@ public class DFLRecommendItem {
 			JsonObjectBuilder imagemap = Json.createObjectBuilder();
 			imagemap.add(LINEConstants.TYPE, LINEConstants.IMAGEMAP);
 			imagemap.add(LINEConstants.BASEURL, Constants.IMG_URL
-					+ "temp_imagemap");
+					+ "temp_imagemap02");
 //					+ "pre_fice_test01");
 			imagemap.add("altText", "イメージマップだよ");
 			JsonObjectBuilder baseSize = Json.createObjectBuilder();
