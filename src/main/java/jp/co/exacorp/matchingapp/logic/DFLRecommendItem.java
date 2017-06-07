@@ -120,6 +120,35 @@ public class DFLRecommendItem {
 			mesJab.add(imagemap);
 			// ------------------------------------------------------------------------------
 
+			JsonObjectBuilder imagemap1 = Json.createObjectBuilder();
+			imagemap1.add(LINEConstants.TYPE, LINEConstants.IMAGEMAP);
+			imagemap1.add(LINEConstants.BASEURL, Constants.IMG_URL
+//					+ "temp_imagemap55");
+//					+ "temp_imagemap");
+					+ "pre_fice_test01");
+			imagemap1.add("altText", "イメージマップだよ");
+			JsonObjectBuilder baseSize1 = Json.createObjectBuilder();
+			baseSize1.add(LINEConstants.WIDTH, 1040);
+			baseSize1.add(LINEConstants.HEIGHT, 1040);
+			imagemap1.add("baseSize", baseSize1);
+			JsonArrayBuilder actions1 = Json.createArrayBuilder();
+			// 左下
+			actions1.add(giveMes4IM(DFLConstants.FIXED_ANNUITY_INSURANCE, 0,
+					520, 520, 520));
+			// 右下
+			actions1.add(giveMes4IM(
+					DFLConstants.STRAIGHT_LINE_LIFE_INSURANCE, 520, 520,
+					520, 520));
+			// 左上
+			actions1.add(giveMes4IM(DFLConstants.VARIABLE_ANNUITY_INSURANCE,
+					0, 0, 520, 520));
+			// 右上
+			actions1.add(giveMes4IM(DFLConstants.VARIABLE_LIFE_INSURANCE,
+					520, 0, 520, 520));
+			imagemap1.add(LINEConstants.ACTIONS, actions1);
+			mesJab.add(imagemap1);
+			// ------------------------------------------------------------------------------
+
 
 			// カルーセルでプラン表示
 //			mesJab.add(makeCarousel5AItem());
@@ -171,6 +200,9 @@ public class DFLRecommendItem {
 	}
 //}
 
+
+
+
 	/**
 	 * imagemapのためのエリア指定
 	 *
@@ -199,6 +231,7 @@ public class DFLRecommendItem {
 		region.add(LINEConstants.AREA, area);
 		return region;
 	}
+
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel1Item() {
