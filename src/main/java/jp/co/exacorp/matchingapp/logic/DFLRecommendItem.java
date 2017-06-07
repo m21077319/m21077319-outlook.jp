@@ -94,26 +94,26 @@ public class DFLRecommendItem {
 			JsonObjectBuilder imagemap = Json.createObjectBuilder();
 			imagemap.add(LINEConstants.TYPE, LINEConstants.IMAGEMAP);
 			imagemap.add(LINEConstants.BASEURL, Constants.IMG_URL
-					+ "plan_12.jpg");
+					+ "plan_11.jpg");
 			imagemap.add("altText", "イメージマップだよ");
 			JsonObjectBuilder baseSize = Json.createObjectBuilder();
 			baseSize.add(LINEConstants.WIDTH, 1040);
 			baseSize.add(LINEConstants.HEIGHT, 1040);
 			imagemap.add("baseSize", baseSize);
 			JsonArrayBuilder actions = Json.createArrayBuilder();
-//			// 左下
-//			actions.add(giveMes4IM(DFLConstants.FIXED_ANNUITY_INSURANCE, 0,
-//					520, 520, 520));
-//			// 右下
-//			actions.add(giveMes4IM(
-//					DFLConstants.STRAIGHT_LINE_LIFE_INSURANCE, 520, 520,
-//					520, 520));
-//			// 左上
-//			actions.add(giveMes4IM(DFLConstants.VARIABLE_ANNUITY_INSURANCE,
-//					0, 0, 520, 520));
-//			// 右上
-//			actions.add(giveMes4IM(DFLConstants.VARIABLE_LIFE_INSURANCE,
-//					520, 0, 520, 520));
+			// 左下
+			actions.add(giveMes4IM(DFLConstants.FIXED_ANNUITY_INSURANCE, 0,
+					520, 520, 520));
+			// 右下
+			actions.add(giveMes4IM(
+					DFLConstants.STRAIGHT_LINE_LIFE_INSURANCE, 520, 520,
+					520, 520));
+			// 左上
+			actions.add(giveMes4IM(DFLConstants.VARIABLE_ANNUITY_INSURANCE,
+					0, 0, 520, 520));
+			// 右上
+			actions.add(giveMes4IM(DFLConstants.VARIABLE_LIFE_INSURANCE,
+					520, 0, 520, 520));
 			imagemap.add(LINEConstants.ACTIONS, actions);
 			mesJab.add(imagemap);
 			// ------------------------------------------------------------------------------
@@ -170,6 +170,34 @@ public class DFLRecommendItem {
 	}
 //}
 
+	/**
+	 * imagemapのためのエリア指定
+	 *
+	 * @param text
+	 *            送信テキスト
+	 * @param x
+	 *            横軸の座標
+	 * @param y
+	 *            縦軸の座標
+	 * @param height
+	 *            高さ
+	 * @param width
+	 *            幅
+	 * @return regionオブジェクト
+	 */
+	private JsonObjectBuilder giveMes4IM(String text, int x, int y, int height,
+			int width) {
+		JsonObjectBuilder region = Json.createObjectBuilder();
+		region.add(LINEConstants.TYPE, LINEConstants.MESSAGE);
+		region.add(LINEConstants.TEXT, text);
+		JsonObjectBuilder area = Json.createObjectBuilder();
+		area.add(LINEConstants.X, x);
+		area.add(LINEConstants.Y, y);
+		area.add(LINEConstants.HEIGHT, height);
+		area.add(LINEConstants.WIDTH, width);
+		region.add(LINEConstants.AREA, area);
+		return region;
+	}
 
 	/** 営業職員さんが扱える三種類のカルーセルを返す */
 	private JsonObjectBuilder makeCarousel1Item() {
