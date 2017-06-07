@@ -83,12 +83,46 @@ public class DFLRecommendItem {
 		// テキスト取得
 		String text = eventMap.get(LINEConstants.TEXT);
 
+
 		// おすすめプラン押下
 		if (text.equals(SELECT_PLAN_EXPLANATION)) {
 			mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
+// TEST START
+			// ------------------------------------------------------------------------------
+			// imagemapを作成
+			// ------------------------------------------------------------------------------
+			JsonObjectBuilder imagemap = Json.createObjectBuilder();
+			imagemap.add(LINEConstants.TYPE, LINEConstants.IMAGEMAP);
+			imagemap.add(LINEConstants.BASEURL, Constants.IMG_URL
+					+ "plan_12.jpg");
+			imagemap.add("altText", "イメージマップだよ");
+			JsonObjectBuilder baseSize = Json.createObjectBuilder();
+			baseSize.add(LINEConstants.WIDTH, 1040);
+			baseSize.add(LINEConstants.HEIGHT, 1040);
+			imagemap.add("baseSize", baseSize);
+			JsonArrayBuilder actions = Json.createArrayBuilder();
+//			// 左下
+//			actions.add(giveMes4IM(DFLConstants.FIXED_ANNUITY_INSURANCE, 0,
+//					520, 520, 520));
+//			// 右下
+//			actions.add(giveMes4IM(
+//					DFLConstants.STRAIGHT_LINE_LIFE_INSURANCE, 520, 520,
+//					520, 520));
+//			// 左上
+//			actions.add(giveMes4IM(DFLConstants.VARIABLE_ANNUITY_INSURANCE,
+//					0, 0, 520, 520));
+//			// 右上
+//			actions.add(giveMes4IM(DFLConstants.VARIABLE_LIFE_INSURANCE,
+//					520, 0, 520, 520));
+			imagemap.add(LINEConstants.ACTIONS, actions);
+			mesJab.add(imagemap);
+			// ------------------------------------------------------------------------------
+
+
 
 			// カルーセルでプラン表示
-			mesJab.add(makeCarousel5AItem());
+//			mesJab.add(makeCarousel5AItem());
+// TEST END
 
 		} else if (text.equals(SELECT_PLAN1_EXPLANATION)) {
 		 	mesJab.add(MessageAPIUtil.giveMessage("シーンを選んでください"));
@@ -374,6 +408,7 @@ public class DFLRecommendItem {
 		return carousel;
 		}
 }
+
 
 ////追加 END
 //
