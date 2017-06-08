@@ -86,7 +86,7 @@ public class DFLRecommendItem {
 
 		// おすすめプラン押下
 		if (text.equals(SELECT_PLAN_EXPLANATION)) {
-			mesJab.add(MessageAPIUtil.giveMessage("お好みのプランを選んでください"));
+			mesJab.add(MessageAPIUtil.giveMessage("おすすめのプランですね。\\お好みのプランを選んでください"));
 // TEST START
 			// ------------------------------------------------------------------------------
 			// imagemapを作成
@@ -98,7 +98,7 @@ public class DFLRecommendItem {
 			imagemap.add("altText", "イメージマップだよ");
 			JsonObjectBuilder baseSize = Json.createObjectBuilder();
 			baseSize.add(LINEConstants.WIDTH, 1040);
-			baseSize.add(LINEConstants.HEIGHT, 1040);
+			baseSize.add(LINEConstants.HEIGHT, 840);
 			imagemap.add("baseSize", baseSize);
 			JsonArrayBuilder actions = Json.createArrayBuilder();
 			// 左下
