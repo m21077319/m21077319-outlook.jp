@@ -102,7 +102,6 @@ public class DFLRecommendItem {
 			imagemap.add("baseSize", baseSize);
 			JsonArrayBuilder actions = Json.createArrayBuilder();
 			// 左下
-			// 左下
 			actions.add(giveMes4IM(DFLConstants.FIXED_ANNUITY_INSURANCE, 0,
 					520, 520, 520));
 			// 右下
