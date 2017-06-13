@@ -2,7 +2,7 @@ applications:
 - path: target/TEST01APP.war
   memory: 512M
   instances: 1
-  domain: eu-gb.mybluemix.net
+  domain: mybluemix.net
   name: TEST01APP
   host: TEST01APP
   disk_quota: 1024M
