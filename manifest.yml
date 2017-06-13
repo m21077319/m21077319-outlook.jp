@@ -1,8 +1,8 @@
 applications:
-- path: target/TEST01APP.war
+- path: target/m21077319-outlook.jp.war
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: TEST01APP
-  host: TEST01APP
+  name: m21077319-outlook.jp
+  host: m21077319-outlook.jp
   disk_quota: 1024M
